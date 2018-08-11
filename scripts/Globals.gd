@@ -6,7 +6,7 @@ func _ready():
 	GUI.update_gui(score)
 	randomize()
 	if OS.get_name() == "Android":
-		pass
+		GUI.set_mobile()
 	else:
 		pass
 

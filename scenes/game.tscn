@@ -4,12 +4,12 @@
 [ext_resource path="res://gfx/badgame.png" type="Texture" id=2]
 [ext_resource path="res://sfx/Powerup11.wav" type="AudioStream" id=3]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 25.5197, 34.8073 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource_name = "bling"
 length = 1.0
@@ -40,7 +40,7 @@ tracks/1/keys = {
 "values": [ 32, 64 ]
 }
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -134,7 +134,7 @@ _sections_unfolded = [ "Audio Bus", "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_area" index="0"]
 
 visible = false
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 
@@ -143,7 +143,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/bling = SubResource( 3 )
+anims/bling = SubResource( 2 )
 blend_times = [  ]
 
 [node name="Particles2D" type="Particles2D" parent="." index="4"]
@@ -161,7 +161,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 3 )
 texture = null
 normal_map = null
 h_frames = 1

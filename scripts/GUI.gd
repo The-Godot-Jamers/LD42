@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+
 func update_gui(value):
 	$TextureRect/HBoxContainer/Label.text = str(value)
 	$AnimationPlayer.play("bling")
@@ -14,3 +15,5 @@ func _on_right_pressed():
 func _on_up_pressed():
 	Input.action_press("ui_up")
 
+func set_mobile():
+	$mobile.visible = true

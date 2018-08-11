@@ -5,7 +5,10 @@ export var speed = 380
 export var motion = Vector2()
 export var jump_height = -1000
 export var gravity = 2400
-
+export var max_fall_speed = 4000
+export var stop_min_velocity = 5
+export var max_bounces = 4
+export var slope_angle = 1.308996939
 
 
 
@@ -13,13 +16,14 @@ func _physics_process(delta):
 	fall(delta)
 	run()
 	jump()
-	motion = move_and_slide(motion,UP,5,4,1.308996939) # extra arguments for better scaling slopes
+	motion = move_and_slide(motion,UP,stop_min_velocity,max_bounces,slope_angle) # extra arguments for better scaling slopes
 
 func fall(delta):
 	if is_on_floor() or is_on_ceiling():
 		motion.y = 0
 	else:
 		motion.y += gravity * delta
+		clamp(motion.y, -jump_height*10, max_fall_speed)
 
 func run(): 
 	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):

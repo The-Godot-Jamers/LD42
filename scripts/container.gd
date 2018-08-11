@@ -16,10 +16,8 @@ func add_games():
 	add_child(i)
 	if rand_range(0.0,1.0) >= 0.5:
 		i.sprite.texture = load("res://gfx/Goodgame.png")
-		#i.sprite.modulate = Color(1.0, 0.0, 0.0, 1.0)
 		i.add_to_group("good")
 	else:
 		i.add_to_group("bad")
 		i.remove_pickup()
-	
-	
+

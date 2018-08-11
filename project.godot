@@ -12,11 +12,15 @@ config_version=3
 
 config/name="LD42"
 run/main_scene="res://scenes/container.tscn"
-config/icon="res://gfx/icon.png"
+config/icon="res://PlayerCharacterScaleTest.png"
 
 [autoload]
 
 Globals="*res://scenes/Globals.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [gdnative]
 
