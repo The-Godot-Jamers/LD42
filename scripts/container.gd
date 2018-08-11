@@ -4,6 +4,7 @@ export var game_xpos_min = 35
 export var game_xpos_max = 735
 export var time_scale = 0.1
 
+
 var game = preload("res://scenes/game.tscn")
 
 func _on_Timer_timeout():
@@ -13,16 +14,17 @@ func _on_Timer_timeout():
 func add_games():
 	var i = game.instance()
 	i.position = Vector2(rand_range(game_xpos_min,game_xpos_max),-50)
+	i.rotation_degrees += rand_range(-10.0, 10.0)
 	add_child(i)
 	if rand_range(0.0,1.0) >= 0.5:
 		i.sprite.texture = load("res://gfx/Goodgame.png")
 		i.add_to_group("good")
 	else:
 		if rand_range(0.0,1.0) <= 0.2:
-			i.modulate = Color(0.5, 0.5, 0.5, 1.0)
+			i.modulate = Color(0.2, 0.2, 0.2, 1.0)
 			i.set_collision_mask_bit(0,true) 
 			#i.collision_mask = "player"
-		elif rand_range(0.0,1.0) >= 0.8:
+		elif rand_range(0.0,1.0) >= 0.6:
 			i.modulate = Color(rand_range(0.0,1.0), rand_range(0.0,1.0), rand_range(0.0,1.0), 0.5)
 			i.set_collision_mask_bit(1,false)
 			i.set_collision_mask_bit(2,false)

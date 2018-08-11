@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=3]
 
-[node name="container" type="Node"]
+[node name="container" type="Node" index="0"]
 
 script = ExtResource( 1 )
 game_xpos_min = 50

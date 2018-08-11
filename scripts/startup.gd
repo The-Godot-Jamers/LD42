@@ -3,7 +3,7 @@ extends Node
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_accept"):
-		_on_TextureButton_pressed()
+		_on_start_pressed()
 
 func _on_start_pressed():
 	$AudioStreamPlayer.play()
