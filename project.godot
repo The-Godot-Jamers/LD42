@@ -17,10 +17,15 @@ config/icon="res://PlayerCharacterScaleTest.png"
 [autoload]
 
 Globals="*res://scenes/Globals.tscn"
+Ren="*res://addons/Ren/Ren.tscn"
 
 [display]
 
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "PersistenceNode", "Ren" )
 
 [gdnative]
 
