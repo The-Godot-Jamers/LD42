@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/GUI.gd" type="Script" id=1]
+[ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=2]
 [ext_resource path="res://gfx/bowling_ball.png" type="Texture" id=3]
 
