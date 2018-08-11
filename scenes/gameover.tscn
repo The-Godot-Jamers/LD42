@@ -4,7 +4,7 @@
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=2]
 [ext_resource path="res://sfx/click1.wav" type="AudioStream" id=3]
 
-[node name="gameover" type="Node" index="0"]
+[node name="gameover" type="Node"]
 
 script = ExtResource( 1 )
 
