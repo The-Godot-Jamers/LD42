@@ -1,6 +1,10 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
+export(String) var character_id = "" setget set_character_id, get_character_id
+export(String) var character_name = "" setget set_character_name, get_character_name
+export(Color) var color = Color("#ffffff") setget set_color, get_color
+export(PackedScene) var avatar setget set_avatar, get_avatar
 export var speed = 50
 export var motion = Vector2()
 export var jump_height = -1000
@@ -52,3 +56,21 @@ func _on_top_hit_body_entered(body):
 
 func _on_Timer_timeout():
 	start = !start
+
+func set_character_id(value):
+	$Character.character_id = value
+
+func get_character_id():
+	return $Character.character_id
+
+func set_character_name(value):
+	$Character.character_name = value
+
+func get_character_name():
+	return $Character.character_name
+
+func set_color(value):
+	$Character.color = value
+
+func get_color():
+	return $Character.color
