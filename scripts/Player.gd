@@ -30,7 +30,7 @@ func run():
 		$AnimatedSprite.flip_h = false
 	elif Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
 		motion.x = -speed
-		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.flip_h = true
 	else:
 		motion.x = 0
 

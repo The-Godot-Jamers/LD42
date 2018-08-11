@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://gfx/badgame.png" type="Texture" id=2]
-[ext_resource path="res://sfx/Powerup11.wav" type="AudioStream" id=3]
-[ext_resource path="res://sfx/Powerup2.wav" type="AudioStream" id=4]
+[ext_resource path="res://gfx/particle.png" type="Texture" id=3]
+[ext_resource path="res://sfx/Powerup11.wav" type="AudioStream" id=4]
+[ext_resource path="res://sfx/Powerup2.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,6 +41,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 32, 64 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ) ]
+}
 
 [sub_resource type="ParticlesMaterial" id=3]
 
@@ -69,7 +82,7 @@ damping = 0.0
 damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
-scale = 1.0
+scale = 0.1
 scale_random = 0.0
 color = Color( 1, 1, 1, 1 )
 hue_variation = 0.0
@@ -79,9 +92,9 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Emission Shape", "Gravity", "Spread" ]
+_sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Scale", "Spread" ]
 
-[node name="game" type="RigidBody2D" groups=[
+[node name="game" type="RigidBody2D" index="0" groups=[
 "balls",
 ]]
 
@@ -152,8 +165,8 @@ blend_times = [  ]
 [node name="Particles2D" type="Particles2D" parent="." index="4"]
 
 emitting = false
-amount = 64
-lifetime = 1.0
+amount = 32
+lifetime = 2.0
 one_shot = false
 preprocess = 0.0
 speed_scale = 1.0
@@ -165,15 +178,15 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
 process_material = SubResource( 3 )
-texture = null
+texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Time" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time" ]
 
 [node name="bling" type="AudioStreamPlayer" parent="." index="5"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 4 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -182,7 +195,7 @@ bus = "Master"
 
 [node name="wompwomp" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
