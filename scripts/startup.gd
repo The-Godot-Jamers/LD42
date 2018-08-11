@@ -8,7 +8,7 @@ func _input(event):
 func _on_start_pressed():
 	$AudioStreamPlayer.play()
 	Globals.GUI.startup()
-	get_tree().change_scene_to(load("res://scenes/container.tscn"))
+	Globals.start()
 
 
 func _on_music_pressed():

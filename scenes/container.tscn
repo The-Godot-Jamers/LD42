@@ -1,50 +1,28 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/container.gd" type="Script" id=1]
-[ext_resource path="res://gfx/container.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=3]
 
 [node name="container" type="Node" index="0"]
 
 script = ExtResource( 1 )
-game_xpos_min = 35
-game_xpos_max = 735
+game_xpos_min = 50
+game_xpos_max = 820
 time_scale = 0.1
 
-[node name="static" type="StaticBody2D" parent="." index="0"]
-
-input_pickable = false
-collision_layer = 4
-collision_mask = 3
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="sprite" type="Sprite" parent="static" index="0"]
-
-position = Vector2( 3, -4 )
-texture = ExtResource( 2 )
-centered = false
-
-[node name="collision" type="CollisionPolygon2D" parent="static" index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( 8.68994, 22.1976, 50.4445, 556.656, 292.621, 501.54, 335.36, 550.855, 510.039, 563.135, 542.137, 526.368, 567.463, 515.822, 612.463, 506.822, 667.291, 495.079, 747.553, 553.575, 793.806, 6.70509, 802.465, 601.097, 4.43558, 596.186 )
-
-[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 363.435, 336.842 )
 
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="Timer" type="Timer" parent="." index="1"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = false
 autostart = true
 
-[node name="Label" type="Label" parent="." index="3"]
+[node name="Label" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -64,6 +42,27 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[node name="TileMap" type="TileMap" parent="." index="3"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 128, 128 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 4
+collision_mask = 3
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -131072, 0, 0, -131065, 0, 0, -65536, 0, 0, -65529, 0, 0, 0, 0, 0, 7, 0, 0, 65536, 0, 0, 65543, 0, 0, 131072, 0, 0, 131079, 0, 0, 196608, 0, 0, 196615, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

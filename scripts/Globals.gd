@@ -18,3 +18,9 @@ func _input(event):
 
 func toggle_music():
 	$AudioStreamPlayer.playing = !$AudioStreamPlayer.playing
+
+func gameover():
+	get_tree().change_scene_to(load("res://scenes/gameover.tscn"))
+
+func start():
+	get_tree().change_scene_to(load("res://scenes/container.tscn"))

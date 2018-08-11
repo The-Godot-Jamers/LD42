@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-3866f89624e56ede0f5895d50d47f7c1.stex"
+path="res://.import/boxCrate.png-e1d160b0eefb909c985da4d71c8619bd.stex"
 
 [deps]
 
-source_file="res://gfx/icon.png"
-dest_files=[ "res://.import/icon.png-3866f89624e56ede0f5895d50d47f7c1.stex" ]
+source_file="res://gfx/boxCrate.png"
+dest_files=[ "res://.import/boxCrate.png-e1d160b0eefb909c985da4d71c8619bd.stex" ]
 
 [params]
 

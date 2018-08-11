@@ -12,7 +12,7 @@ func _physics_process(delta):
 	if position.y >= bottom:
 		$wompwomp.play()
 		Globals.GUI.hide()
-		get_tree().change_scene_to(load("res://scenes/gameover.tscn"))
+		Globals.gameover()
 
 func _on_pickup_area_body_entered(body):
 	if not picked:
