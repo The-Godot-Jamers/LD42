@@ -25,7 +25,7 @@ height = 27.424
 custom_solver_bias = 0.0
 extents = Vector2( 10.8651, 9.38346 )
 
-[node name="enemy1" type="KinematicBody2D" index="0"]
+[node name="enemy1" type="KinematicBody2D"]
 
 z_index = 1
 input_pickable = false

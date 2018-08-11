@@ -3,6 +3,7 @@ var score = 0 setget _set_score, _get_score
 onready var GUI = $GUI
 
 func _ready():
+	Ren.define("score", score)
 	GUI.update_gui(score)
 	randomize()
 	if OS.get_name() == "Android":
