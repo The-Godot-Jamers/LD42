@@ -13,12 +13,12 @@ func _on_Timer_timeout():
 func add_balls():
 	var i = ball.instance()
 	i.position = Vector2(rand_range(ball_xpos_min,ball_xpos_max),-50)
+	add_child(i)
 	if rand_range(0.0,1.0) >= 0.5:
-		i.modulate = Color(1.0, 0.0, 0.0, 1.0)
+		i.sprite.modulate = Color(1.0, 0.0, 0.0, 1.0)
 		i.add_to_group("good")
 	else:
 		i.add_to_group("bad")
-	add_child(i)
-	#update GUI with good balls
-	var goods = get_tree().get_nodes_in_group("good")
-	Globals.GUI.update_gui(goods.size())
+		i.remove_pickup()
+	
+	

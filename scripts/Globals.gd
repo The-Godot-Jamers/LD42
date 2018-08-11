@@ -1,8 +1,9 @@
 extends Node
-
+var score = 0
 onready var GUI = $GUI
 
 func _ready():
+	GUI.update_gui(score)
 	randomize()
 
 func _input(event):
