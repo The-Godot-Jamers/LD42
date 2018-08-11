@@ -87,7 +87,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer" index="2"]
+[node name="start" type="TextureButton" parent="CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -110,7 +110,7 @@ group = null
 texture_normal = ExtResource( 2 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton" index="0"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/start" index="0"]
 
 modulate = Color( 0.195313, 0.17395, 0.17395, 1 )
 anchor_left = 0.5
@@ -144,6 +144,6 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
 
 
