@@ -18,13 +18,15 @@ custom_solver_bias = 0.0
 radius = 14.0556
 height = 62.1964
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
+z_index = 1
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
