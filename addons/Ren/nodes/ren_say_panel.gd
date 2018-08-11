@@ -24,7 +24,7 @@ func _input(event):
 	if Ren.skip_auto:
 		return
 
-	if event.is_action_pressed("ren_forward"):
+	if event.is_action_pressed("mouse_left"):
 		if typing: # if typing complete it
 			typing = false
 
@@ -117,6 +117,6 @@ func _on_Adv_gui_input(ev):
 
 	if ev.button_index == BUTTON_LEFT:
 		var event = InputEventAction.new()
-		event.action = "ren_forward"
+		event.action = "mouse_left"
 		event.pressed = true
 		Input.parse_input_event(event)
