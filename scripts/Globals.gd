@@ -1,5 +1,5 @@
 extends Node
-var score = 0
+var score = 0 setget _set_score, _get_score
 onready var GUI = $GUI
 
 func _ready():
@@ -27,3 +27,9 @@ func gameover():
 func start():
 	score = 0
 	get_tree().change_scene_to(load("res://scenes/level1.tscn"))
+
+func _set_score(value):
+	Ren.define("score", value)
+
+func _get_score():
+	return Ren.get_value("score")
