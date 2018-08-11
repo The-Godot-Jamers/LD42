@@ -11,7 +11,6 @@ export var max_bounces = 4
 export var slope_angle = 1.308996939
 
 
-
 func _physics_process(delta):
 	fall(delta)
 	run()
@@ -42,3 +41,12 @@ func jump():
 			$AudioStreamPlayer.play()
 	
 	
+
+func _on_ghost_timer_timeout():
+	if motion.x >= 0.0 or motion.y >= 0.0:
+		var ghost = preload("res://scenes/ghost.tscn").instance()
+		get_parent().add_child(ghost)
+		ghost.position = position
+		ghost.scale = $AnimatedSprite.scale
+		ghost.flip_h = $AnimatedSprite.flip_h
+		ghost.texture = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation,$AnimatedSprite.frame)

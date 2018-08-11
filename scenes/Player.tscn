@@ -60,4 +60,13 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
+[node name="ghost_timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="ghost_timer" to="." method="_on_ghost_timer_timeout"]
+
 
