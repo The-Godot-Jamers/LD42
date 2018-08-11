@@ -1,4 +1,4 @@
-extends Button
+extends Control
 
 export(Color) var idle_text_color = Color( 0.533333, 0.533333, 0.533333, 1 )
 export(Color) var focus_text_color = Color( 0, 0.506836, 0.675781, 1 )
@@ -14,7 +14,7 @@ func _ready():
 	connect("focus_exited", self, "_on_idle")
 	connect("mouse_entered", self, "_on_hover")
 	connect("mouse_exited", self, "_on_idle")
-	connect("pressed", self, "_on_pressed", [], CONNECT_ONESHOT)
+	connect("gui_input", self, "_on_pressed", [], CONNECT_ONESHOT)
 	connect("resized", self, "_on_resized")
 	label.mouse_filter = MOUSE_FILTER_IGNORE
 	label.bbcode_enabled = true
@@ -32,11 +32,11 @@ func _on_focus():
 func _on_hover():
 	label.add_color_override("default_color", hover_text_color)
 
-func _on_pressed():
-	label.add_color_override("default_color", pressed_text_color)
-	print("final_choice ", id)
-	Ren.set_meta("last_choice",id) #for checking choice in VS
-	Ren.exit_statement({"final_choice":id})
+func _on_pressed(event):
+	if event.is_action_pressed("mouse_left"):
+		label.add_color_override("default_color", pressed_text_color)
+		print("final_choice ", id)
+		Ren.exit_statement({"final_choice":id})
 
 func set_disabled(value):
 	.set_disabled(value)
