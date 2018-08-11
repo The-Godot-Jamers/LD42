@@ -15,6 +15,8 @@ func _input(event):
 		get_tree().quit()
 	if Input.is_action_just_pressed("ui_focus_prev"):
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("ui_focus_next"):
+		get_tree().change_scene_to(load("res://scenes/level2.tscn"))
 
 func toggle_music():
 	$AudioStreamPlayer.playing = !$AudioStreamPlayer.playing
