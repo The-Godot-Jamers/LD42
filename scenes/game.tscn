@@ -1,17 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scripts/ball.gd" type="Script" id=1]
-[ext_resource path="res://gfx/bowling_ball.png" type="Texture" id=2]
+[ext_resource path="res://scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://gfx/badgame.png" type="Texture" id=2]
+[ext_resource path="res://sfx/Powerup11.wav" type="AudioStream" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 30.0
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-radius = 28.8346
+extents = Vector2( 25.5197, 34.8073 )
 
 [sub_resource type="Animation" id=3]
 
@@ -84,7 +80,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Gravity", "Spread" ]
 
-[node name="ball" type="RigidBody2D" groups=[
+[node name="game" type="RigidBody2D" index="0" groups=[
 "balls",
 ]]
 
@@ -108,15 +104,20 @@ angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="collision" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -28.9569, -40.8348, 28.9622, -40.8348, 31.9034, -37.837, 32.0165, 37.6727, 28.6794, 40.727, -28.9003, 40.8401, -32.0112, 37.6727, -32.0112, -37.9502 )
 
 [node name="pickup_area" type="Area2D" parent="." index="2"]
 
@@ -132,7 +133,8 @@ _sections_unfolded = [ "Audio Bus", "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_area" index="0"]
 
-shape = SubResource( 2 )
+visible = false
+shape = SubResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 
@@ -165,6 +167,15 @@ normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="pickup_area" to="." method="_on_pickup_area_body_entered"]
 

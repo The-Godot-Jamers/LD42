@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=2]
-[ext_resource path="res://gfx/bowling_ball.png" type="Texture" id=3]
+[ext_resource path="res://gfx/Goodgame.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -84,13 +84,12 @@ _sections_unfolded = [ "Anchor", "custom_constants" ]
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer" index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 64.0
-margin_bottom = 64.0
+margin_bottom = 82.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -108,9 +107,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 114.0
-margin_top = 25.0
+margin_top = 34.0
 margin_right = 138.0
-margin_bottom = 39.0
+margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

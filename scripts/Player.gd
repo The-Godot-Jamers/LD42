@@ -23,5 +23,6 @@ func _physics_process(delta):
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
 			movement.y = jump_height
+			$AudioStreamPlayer.play()
 	movement = move_and_slide(movement,UP)
 	
