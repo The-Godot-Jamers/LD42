@@ -13,6 +13,7 @@ extents = Vector2( 64, 64 )
 
 position = Vector2( 217.358, 73.8197 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
 
@@ -27,5 +28,6 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 
