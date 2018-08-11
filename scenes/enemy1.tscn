@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/enemy1.gd" type="Script" id=1]
+[ext_resource path="res://PlayerCharacterScaleTest.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 13.0688
+height = 27.424
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.8651, 9.38346 )
+
+[node name="enemy1" type="KinematicBody2D"]
+
+z_index = 1
+input_pickable = false
+collision_layer = 16
+collision_mask = 4
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+speed = 50
+motion = Vector2( 0, 0 )
+jump_height = -1000
+gravity = 2400
+max_fall_speed = 4000
+stop_min_velocity = 5
+max_bounces = 4
+slope_angle = 1.309
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+animation = "default"
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="down" type="RayCast2D" parent="AnimatedSprite" index="0"]
+
+position = Vector2( 80, 0 )
+scale = Vector2( 5, 5 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 4
+_sections_unfolded = [ "Transform" ]
+
+[node name="forward" type="RayCast2D" parent="AnimatedSprite" index="1"]
+
+position = Vector2( 100, 0 )
+rotation = -1.5708
+scale = Vector2( 5, 5 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 4
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+shape = SubResource( 2 )
+
+[node name="top_hit" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+collision_mask = 1024
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_hit" index="0"]
+
+position = Vector2( -0.231968, -16.2375 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[connection signal="body_entered" from="top_hit" to="." method="_on_top_hit_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
