@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="LD42"
-run/main_scene="res://scenes/container.tscn"
+run/main_scene="res://scenes/startup.tscn"
 config/icon="res://PlayerCharacterScaleTest.png"
 
 [autoload]
