@@ -81,10 +81,11 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Emission Shape", "Gravity", "Spread" ]
 
-[node name="game" type="RigidBody2D" groups=[
+[node name="game" type="RigidBody2D" index="0" groups=[
 "balls",
 ]]
 
+position = Vector2( 0.0510464, -0.0226974 )
 input_pickable = false
 collision_layer = 2
 collision_mask = 6

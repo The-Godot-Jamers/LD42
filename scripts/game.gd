@@ -10,6 +10,9 @@ func remove_pickup():
 
 func _physics_process(delta):
 	if position.y >= bottom:
+		if is_in_group("ghostly"):
+			queue_free()
+			return
 		$wompwomp.play()
 		Globals.GUI.hide()
 		Globals.gameover()

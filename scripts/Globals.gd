@@ -23,4 +23,5 @@ func gameover():
 	get_tree().change_scene_to(load("res://scenes/gameover.tscn"))
 
 func start():
+	score = 0
 	get_tree().change_scene_to(load("res://scenes/container.tscn"))
