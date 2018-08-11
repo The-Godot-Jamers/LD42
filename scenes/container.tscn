@@ -36,6 +36,10 @@ polygon = PoolVector2Array( 8.68994, 22.1976, 50.4445, 556.656, 292.621, 501.54,
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 363.435, 336.842 )
+speed = 380
+motion = Vector2( 0, 0 )
+jump_height = -1000
+gravity = 2400
 
 [node name="Timer" type="Timer" parent="." index="2"]
 

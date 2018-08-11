@@ -5,6 +5,10 @@ onready var GUI = $GUI
 func _ready():
 	GUI.update_gui(score)
 	randomize()
+	if OS.get_name() == "Android":
+		pass
+	else:
+		pass
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):

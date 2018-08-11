@@ -31,6 +31,10 @@ _sections_unfolded = [ "Collision", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
+speed = 380
+motion = Vector2( 0, 0 )
+jump_height = -1000
+gravity = 2400
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 

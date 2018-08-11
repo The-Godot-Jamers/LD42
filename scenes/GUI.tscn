@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=2]
 [ext_resource path="res://gfx/Goodgame.png" type="Texture" id=3]
+[ext_resource path="res://gfx/mobile/blue_sliderLeft.png" type="Texture" id=4]
+[ext_resource path="res://gfx/mobile/blue_sliderRight.png" type="Texture" id=5]
+[ext_resource path="res://gfx/mobile/blue_sliderUp.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -35,7 +38,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -30 ), Vector2( 0, 0 ) ]
 }
 
-[node name="GUI" type="CanvasLayer"]
+[node name="GUI" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -130,5 +133,101 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/bling = SubResource( 1 )
 blend_times = [  ]
+
+[node name="mobile" type="Control" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="left" type="TextureButton" parent="mobile" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 500.0
+margin_right = 45.0
+margin_bottom = 540.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="right" type="TextureButton" parent="mobile" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 90.0
+margin_top = 500.0
+margin_right = 130.0
+margin_bottom = 540.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="up" type="TextureButton" parent="mobile" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 900.0
+margin_top = 500.0
+margin_right = 940.0
+margin_bottom = 542.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[connection signal="pressed" from="mobile/left" to="." method="_on_left_pressed"]
+
+[connection signal="pressed" from="mobile/right" to="." method="_on_right_pressed"]
+
+[connection signal="pressed" from="mobile/up" to="." method="_on_up_pressed"]
 
 
