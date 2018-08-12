@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
-export(String) var character_id = "" setget set_character_id, get_character_id
-export(String) var character_name = "" setget set_character_name, get_character_name
-export(Color) var color = Color("#ffffff") setget set_color, get_color
-export(PackedScene) var avatar setget set_avatar, get_avatar
-export(GDScript) var dialog_script = GDScript() setget set_dialog_script, get_dialog_script
+export(String) var character_id = ""
+export(String) var character_name = ""
+export(Color) var color = Color("#ffffff") 
+export(PackedScene) var avatar 
+export(GDScript) var dialog_script = GDScript.new() setget set_dialog_script, get_dialog_script
 
 export var speed = 50
 export var motion = Vector2()
@@ -62,30 +62,6 @@ func _on_top_hit_body_entered(body):
 
 func _on_Timer_timeout():
 	start = !start
-
-func set_character_id(value):
-	$Character.character_id = value
-
-func get_character_id():
-	return $Character.character_id
-
-func set_character_name(value):
-	$Character.character_name = value
-
-func get_character_name():
-	return $Character.character_name
-
-func set_color(value):
-	$Character.color = value
-
-func get_color():
-	return $Character.color
-
-func set_avatar(value):
-	$Character.avatar = value
-
-func get_avatar():
-	return $Character.avatar
 
 func set_dialog_script():
 	$DialogNode.set_script(dialog_script)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scenes/enemy1.gd" type="Script" id=1]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_000.png" type="Texture" id=2]
@@ -36,6 +36,8 @@
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_007.png" type="Texture" id=34]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_008.png" type="Texture" id=35]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_009.png" type="Texture" id=36]
+[ext_resource path="res://addons/Ren/nodes/character.gd" type="Script" id=37]
+[ext_resource path="res://addons/Ren/icons/ren_character.svg" type="Texture" id=38]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -97,11 +99,11 @@ slope_angle = 1.309
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
+editor/display_folded = true
 modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 2
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -144,6 +146,7 @@ shape = SubResource( 2 )
 
 [node name="top_hit" type="Area2D" parent="." index="2"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -166,6 +169,19 @@ process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
+
+[node name="Character" type="Node" parent="." index="4"]
+
+script = ExtResource( 37 )
+__meta__ = {
+"_editor_icon": ExtResource( 38 )
+}
+character_id = ""
+character_name = ""
+color = Color( 1, 1, 1, 1 )
+prefix = ""
+suffix = ""
+avatar = null
 
 [connection signal="body_entered" from="top_hit" to="." method="_on_top_hit_body_entered"]
 
