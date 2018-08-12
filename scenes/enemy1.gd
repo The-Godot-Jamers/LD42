@@ -3,9 +3,6 @@ extends KinematicBody2D
 const UP = Vector2(0,-1)
 export(String) var character_id = ""
 export(String) var character_name = ""
-# export(Color) var color = Color("#ffffff") 
-# export(PackedScene) var avatar 
-# export(GDScript) var dialog_script = GDScript.new() setget set_dialog_script, get_dialog_script
 
 export var speed = 50
 export var motion = Vector2()
@@ -21,9 +18,6 @@ var kwargs = {}
 
 func _ready():
 	set_kwargs({"name": character_name})
-	# set_kwargs({"color":color.to_html()})
-	# if avatar != null:
-	# 	set_kwargs({"avatar":avatar.resource_path})
 	Ren.character(character_id, kwargs, self)
 	$DialogNode.parent = name
 
@@ -79,12 +73,6 @@ func _on_top_hit_body_entered(body):
 
 func _on_Timer_timeout():
 	start = !start
-
-# func set_dialog_script():
-# 	$DialogNode.set_script(dialog_script)
-
-# func get_dialog_script():
-# 	return $DialogNode.get_script()
 
 func _on_Area2D_body_entered(body):
 	if body.name != "Player":
