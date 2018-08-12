@@ -1,7 +1,7 @@
 extends Node
 
 var parent
-var random_max = 5
+var random_max = 13
 
 func _ready():
 	Ren.connect("story_step", self, "story")
@@ -52,5 +52,26 @@ func story(dialog_name):
 		"5":
 			random_say("Buy my awesome game!")
 		
+		"6":
+			random_say("Online battleroyle, roguelike, open world!")
 		
+		"7":
+			random_say("Mood 2: Heaven on earth!")
 		
+		"8":
+			random_say("Alley fighter 2: Super Mega Ultra DX Giga Ultimate volume 3!")
+		
+		"9":
+			random_say("Infinite Bingo Crime Scene Investigation!")
+		
+		"10":
+			random_say("Geriatric Bazooka Orchestra!")
+		
+		"11":
+			random_say("ZEXE: Friend known")
+		
+		"12":
+			random_say("Cow simulator")
+		
+		"13":
+			random_say("STS: Slower than sound")

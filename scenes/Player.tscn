@@ -98,7 +98,7 @@ slope_angle = 1.309
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
@@ -125,7 +125,6 @@ autostart = true
 
 [node name="Light2D" type="Light2D" parent="." index="4"]
 
-visible = false
 position = Vector2( 1.04895, 0 )
 enabled = true
 editor_only = false
