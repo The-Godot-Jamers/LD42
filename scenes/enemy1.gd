@@ -80,11 +80,8 @@ func _on_Area2D_body_entered(body):
 		$DialogNode.on_active_dialog()
 
 func _on_top_hit_area_entered(area):
-	print("1")
 	if area.get_parent().state == "fall" or area.get_parent().state == "land":
-		print("2")
 		if $death_timer.is_stopped():
-			print("3")
 			$DialogNode.disconnect("story_step", self, "story")
 			Globals.score += 1
 			$AnimatedSprite.animation = "die"

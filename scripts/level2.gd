@@ -21,4 +21,5 @@ func _ready():
 				if $TileMap.get_cellv(pos) != -1:
 					$TileMap.set_cellv(pos,-1)
 				pos.y +=1
+			pos.y -= 3
 			pos.x +=1
