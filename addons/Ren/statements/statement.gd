@@ -70,6 +70,9 @@ func add_to_history():
 	Ren.current_id += 1
 
 func debug(kws = [], some_custom_text = ""):
+	if not Ren.debug_on:
+		return ""
+		
 	var dbg = type + "("
 	dbg += Ren.debug(kwargs, kws, some_custom_text) + ")"
 	return dbg

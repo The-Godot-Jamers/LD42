@@ -370,14 +370,16 @@ func save_global_history():
 	$Persistence.password = save_password
 
 	var data = $Persistence.get_data(save_name)
-	prints("get global_history from:", save_name)
+	if debug_on:
+		prints("get global_history from:", save_name)
 	if data == null:
 		return false
 
 	data["global_history"] = global_history.duplicate()
 	
 	var result = $Persistence.save_data(save_name)
-	prints("save global_history to:", save_name)
+	if debug_on:
+		prints("save global_history to:", save_name)
 	return result
 
 func load_global_history():
@@ -386,7 +388,8 @@ func load_global_history():
 	$Persistence.password = save_password
 	global_history = []
 	var data = $Persistence.get_data(save_name)
-	prints("load global_history from:", save_name)
+	if debug_on:
+		prints("load global_history from:", save_name)
 	if data == null:
 		return false
 	
