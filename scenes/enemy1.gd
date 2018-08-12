@@ -68,8 +68,10 @@ func run():
 func _on_top_hit_body_entered(body):
 	if body.name != "Player":
 		return
-	prints(name, "was kill")
-	queue_free()
+	
+	if body.state == "falling":
+		prints(name, "was kill")
+		queue_free()
 
 func _on_Timer_timeout():
 	start = !start
