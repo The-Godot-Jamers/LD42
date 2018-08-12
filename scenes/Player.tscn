@@ -75,7 +75,7 @@ tracks/1/keys = {
 "values": [ 0.5, 0.8, 0.5 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 z_index = 1
 input_pickable = false
@@ -98,7 +98,7 @@ slope_angle = 1.309
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 1
+frame = 2
 playing = true
 _sections_unfolded = [ "Transform" ]
 
