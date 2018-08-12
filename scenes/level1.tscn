@@ -1,8 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/level1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "portal"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 958.449, 710.249 ), Vector2( 958.449, 515 ) ]
+}
 
 [node name="level1" type="Node"]
 
@@ -10,6 +30,7 @@ script = ExtResource( 1 )
 game_xpos_min = 35
 game_xpos_max = 735
 time_scale = 0.1
+needed_points = 20
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -44,6 +65,23 @@ format = 1
 tile_data = PoolIntArray( 0, 0, 0, 31, 0, 0, 65536, 0, 0, 65567, 0, 0, 131072, 0, 0, 131103, 0, 0, 196608, 0, 0, 196639, 0, 0, 262144, 0, 0, 262175, 0, 0, 327680, 0, 0, 327711, 0, 0, 393216, 0, 0, 393247, 0, 0, 458752, 0, 0, 458783, 0, 0, 524288, 0, 0, 524319, 0, 0, 589824, 0, 0, 589855, 0, 0, 655360, 0, 0, 655391, 0, 0, 720896, 0, 0, 720927, 0, 0, 786432, 0, 0, 786463, 0, 0, 851968, 0, 0, 851999, 0, 0, 917504, 0, 0, 917535, 0, 0, 983040, 0, 0, 983071, 0, 0, 1048576, 0, 0, 1048607, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
+[node name="portal" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 958.449, 710.249 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="portal" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/portal = SubResource( 1 )
+blend_times = [  ]
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
 
 

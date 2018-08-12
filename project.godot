@@ -44,6 +44,7 @@ mouse_left=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resou
 2d_physics/layer_4="pickups"
 2d_physics/layer_5="enemy"
 2d_physics/layer_11="boot"
+2d_physics/layer_12="portal"
 
 [physics]
 

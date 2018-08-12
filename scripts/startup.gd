@@ -9,7 +9,8 @@ func _on_start_pressed():
 	$AudioStreamPlayer.play()
 	Globals.GUI.startup()
 	Globals.start()
-
+	Globals.score = 0
+	
 
 func _on_music_pressed():
 	$AudioStreamPlayer.play()

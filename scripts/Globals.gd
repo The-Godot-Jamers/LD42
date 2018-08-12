@@ -27,10 +27,12 @@ func gameover():
 
 func start():
 	score = 0
+	GUI.update_gui(score)
 	get_tree().change_scene_to(load("res://scenes/level1.tscn"))
 
 func _set_score(value):
 	Ren.define("score", value)
+
 
 func _get_score():
 	return Ren.get_value("score")
