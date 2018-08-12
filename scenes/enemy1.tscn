@@ -25,7 +25,7 @@ height = 27.424
 custom_solver_bias = 0.0
 extents = Vector2( 10.8651, 9.38346 )
 
-[node name="enemy1" type="KinematicBody2D"]
+[node name="enemy1" type="KinematicBody2D" index="0"]
 
 z_index = 1
 input_pickable = false
@@ -38,6 +38,7 @@ character_id = ""
 character_name = ""
 color = Color( 1, 1, 1, 1 )
 avatar = null
+dialog_script = null
 speed = 50
 motion = Vector2( 0, 0 )
 jump_height = -1000
@@ -118,6 +119,8 @@ color = Color( 1, 1, 1, 1 )
 prefix = ""
 suffix = ""
 avatar = null
+
+[node name="DialogNode" type="Node" parent="." index="5"]
 
 [connection signal="body_entered" from="top_hit" to="." method="_on_top_hit_body_entered"]
 
