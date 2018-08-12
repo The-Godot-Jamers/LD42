@@ -24,3 +24,9 @@ func set_mobile():
 func hide():
 	$TextureRect.visible = false
 	$mobile.visible = false
+
+func show_ren():
+	$RenGUI.show()
+
+func hide_ren():
+	$RenGUI.hide()

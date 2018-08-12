@@ -33,6 +33,8 @@ func start():
 func _set_score(value):
 	Ren.define("score", value)
 
-
 func _get_score():
 	return Ren.get_value("score")
+
+func active_ren():
+	GUI.show_ren()

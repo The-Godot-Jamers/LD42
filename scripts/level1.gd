@@ -38,4 +38,5 @@ func add_games():
 		i.remove_pickup()
 
 func _on_portal_body_entered(body):
+	Globals.active_ren()
 	get_tree().change_scene_to(load("res://scenes/level2.tscn"))

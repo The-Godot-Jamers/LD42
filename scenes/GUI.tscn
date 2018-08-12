@@ -1,11 +1,21 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
-[ext_resource path="res://gfx/blue_button02.png" type="Texture" id=2]
-[ext_resource path="res://gfx/Goodgame.png" type="Texture" id=3]
-[ext_resource path="res://gfx/mobile/blue_sliderLeft.png" type="Texture" id=4]
-[ext_resource path="res://gfx/mobile/blue_sliderRight.png" type="Texture" id=5]
-[ext_resource path="res://gfx/mobile/blue_sliderUp.png" type="Texture" id=6]
+[ext_resource path="res://scenes/ren_gui/Window.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gfx/blue_button02.png" type="Texture" id=3]
+[ext_resource path="res://gfx/Goodgame.png" type="Texture" id=4]
+[ext_resource path="res://ubuntu-font-family/Ubuntu-B.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://gfx/mobile/blue_sliderLeft.png" type="Texture" id=6]
+[ext_resource path="res://gfx/mobile/blue_sliderRight.png" type="Texture" id=7]
+[ext_resource path="res://gfx/mobile/blue_sliderUp.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 22
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=1]
 
@@ -38,7 +48,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -30 ), Vector2( 0, 0 ) ]
 }
 
-[node name="GUI" type="CanvasLayer"]
+[node name="GUI" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -47,16 +57,25 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="TextureRect" type="TextureRect" parent="." index="0"]
+[node name="RenGUI" parent="." index="0" instance=ExtResource( 2 )]
+
+visible = false
+margin_left = 2.0
+margin_top = -5.0
+margin_right = 2.0
+margin_bottom = -5.0
+
+[node name="TextureRect" type="TextureRect" parent="." index="1"]
 
 visible = false
 anchor_left = 0.5
 anchor_top = 0.0
 anchor_right = 0.5
 anchor_bottom = 0.0
-margin_left = -20.0
-margin_right = 20.0
-margin_bottom = 40.0
+margin_left = 139.0
+margin_top = 2.0
+margin_right = 329.0
+margin_bottom = 51.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -64,7 +83,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 
@@ -100,7 +119,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 
@@ -110,22 +129,24 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 114.0
-margin_top = 34.0
-margin_right = 138.0
-margin_bottom = 48.0
+margin_left = 100.0
+margin_top = 8.0
+margin_right = 139.0
+margin_bottom = 34.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
 text = "123"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -135,7 +156,7 @@ playback_speed = 1.0
 anims/bling = SubResource( 1 )
 blend_times = [  ]
 
-[node name="mobile" type="Control" parent="." index="2"]
+[node name="mobile" type="Control" parent="." index="3"]
 
 editor/display_folded = true
 visible = false
@@ -173,7 +194,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 6 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="right" type="TextureButton" parent="mobile" index="1"]
@@ -198,7 +219,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 7 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="up" type="TextureButton" parent="mobile" index="2"]
@@ -223,7 +244,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 8 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
 [connection signal="pressed" from="mobile/left" to="." method="_on_left_pressed"]
