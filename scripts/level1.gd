@@ -4,7 +4,7 @@ export var game_xpos_min = 35
 export var game_xpos_max = 735
 export var time_scale = 0.1
 
-export var needed_points = 20
+export var needed_points = 15
 var game = preload("res://scenes/game.tscn")
 
 func _on_Timer_timeout():

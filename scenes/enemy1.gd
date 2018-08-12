@@ -66,11 +66,13 @@ func run():
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 
 func _on_top_hit_body_entered(body):
+	print("hit")
 	if body.name != "Player":
 		return
 	
 	if body.state == "falling":
 		prints(name, "was kill")
+		Globals.score += 1
 		queue_free()
 
 func _on_Timer_timeout():
