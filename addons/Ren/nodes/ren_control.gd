@@ -1,6 +1,6 @@
 extends Control
 
-var rnode = load("ren_node_core.gd").new()
+var rnode = load("res://addons/Ren/nodes/ren_node_core.gd").new()
 
 export(bool) var auto_define
 export(String) var node_id = ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scenes/enemy1.gd" type="Script" id=1]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_000.png" type="Texture" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_007.png" type="Texture" id=34]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_008.png" type="Texture" id=35]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_009.png" type="Texture" id=36]
+[ext_resource path="res://scripts/dialogs/random_dialog.gd" type="Script" id=37]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -72,7 +73,12 @@ height = 27.424
 custom_solver_bias = 0.0
 extents = Vector2( 15.9095, 3.69846 )
 
-[node name="enemy1" type="KinematicBody2D" index="0"]
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 33.3471
+
+[node name="enemy1" type="KinematicBody2D"]
 
 z_index = 1
 input_pickable = false
@@ -80,12 +86,9 @@ collision_layer = 16
 collision_mask = 4
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
-character_id = ""
-character_name = ""
-color = Color( 1, 1, 1, 1 )
-avatar = null
-dialog_script = null
+_sections_unfolded = [ "Collision", "Visibility" ]
+character_id = "enemy"
+character_name = "Seller"
 speed = 50
 motion = Vector2( 0, 0 )
 jump_height = -1000
@@ -102,7 +105,6 @@ modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 2
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -171,8 +173,28 @@ autostart = true
 
 [node name="DialogNode" type="Node" parent="." index="4"]
 
+script = ExtResource( 37 )
+
+[node name="Area2D" type="Area2D" parent="." index="5"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 5.26654, -0.263145 )
+shape = SubResource( 4 )
+
 [connection signal="body_entered" from="top_hit" to="." method="_on_top_hit_body_entered"]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 

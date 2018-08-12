@@ -18,7 +18,6 @@ config/icon="res://PlayerCharacterScaleTest.png"
 
 Globals="*res://scenes/Globals.tscn"
 Ren="*res://addons/Ren/Ren.tscn"
-Window="*res://scenes/ren_gui/Window.tscn"
 
 [display]
 
