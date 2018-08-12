@@ -27,5 +27,11 @@ func story(dialog_name):
 				You need to 15 collect boxes with good games.
 				"""
 			})
+		"1":
+			Ren.say({
+			"what": """
+				Get to the portal.
+				"""
+			})
 			
 		

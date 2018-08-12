@@ -31,6 +31,7 @@ script = ExtResource( 1 )
 game_xpos_min = 35
 game_xpos_max = 735
 time_scale = 0.1
+minimum_interval = 0.3
 needed_points = 20
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]

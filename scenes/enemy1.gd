@@ -13,6 +13,8 @@ export var stop_min_velocity = 5
 export var max_bounces = 4
 export var slope_angle = 1.308996939
 
+var dead = false
+
 var start = true
 var kwargs = {}
 
@@ -27,9 +29,10 @@ func set_kwargs(new_kwargs):
 		kwargs[kws] = new_kwargs[kws]
 
 func _physics_process(delta):
-	fall(delta)
-	run()
-	motion = move_and_slide(motion,UP,stop_min_velocity,max_bounces,slope_angle) # extra arguments for better scaling slopes
+	if !dead:
+		fall(delta)
+		run()
+		motion = move_and_slide(motion,UP,stop_min_velocity,max_bounces,slope_angle) # extra arguments for better scaling slopes
 
 func fall(delta):
 	if is_on_floor() or is_on_ceiling():
@@ -65,16 +68,7 @@ func run():
 		$AnimatedSprite/forward2.rotation = -$AnimatedSprite/forward2.rotation
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 
-func _on_top_hit_body_entered(body):
-	print("hit")
-	if body.name != "Player":
-		return
 	
-	if body.state == "falling":
-		prints(name, "was kill")
-		Globals.score += 1
-		queue_free()
-
 func _on_Timer_timeout():
 	start = !start
 
@@ -84,3 +78,14 @@ func _on_Area2D_body_entered(body):
 	
 	$DialogNode.on_active_dialog()
 
+func _on_top_hit_area_entered(area):
+	if area.get_parent().state == "fall":
+		prints(area.get_parent())
+		dead = true
+		Globals.score += 1
+		$AnimatedSprite.animation = "die"
+		$death_timer.start()
+
+func _on_death_timer_timeout():
+	if dead:
+		queue_free()

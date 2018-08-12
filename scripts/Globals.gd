@@ -32,6 +32,7 @@ func start():
 
 func _set_score(value):
 	Ren.define("score", value)
+	$GUI.update_gui(value)
 
 func _get_score():
 	return Ren.get_value("score")
