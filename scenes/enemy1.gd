@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
-export(String) var character_id = "" setget set_character_id, get_character_id
-export(String) var character_name = "" setget set_character_name, get_character_name
-export(Color) var color = Color("#ffffff") setget set_color, get_color
-export(PackedScene) var avatar setget set_avatar, get_avatar
+#export(String) var character_id = "" setget set_character_id, get_character_id
+#export(String) var character_name = "" setget set_character_name, get_character_name
+#export(Color) var color = Color("#ffffff") setget set_color, get_color
+#export(PackedScene) var avatar setget set_avatar, get_avatar
 export var speed = 50
 export var motion = Vector2()
 export var jump_height = -1000
@@ -30,12 +30,14 @@ func fall(delta):
 
 func run(): 
 	if start:
+		$AnimatedSprite.animation = "walk"
 		if is_on_floor():
 			if $AnimatedSprite.flip_h:
-				motion.x = -speed
-			else:
 				motion.x = speed
+			else:
+				motion.x = -speed
 	else:
+		$AnimatedSprite.animation = "idle"
 		motion.x = 0
 	
 	var flip = false
@@ -43,12 +45,14 @@ func run():
 		pass
 	else:
 		flip = true
-	if $AnimatedSprite/forward.is_colliding():
+	if $AnimatedSprite/forward.is_colliding() or $AnimatedSprite/forward2.is_colliding():
 		flip = true
 	if flip:
 		$AnimatedSprite/down.position = -$AnimatedSprite/down.position
 		$AnimatedSprite/forward.position = -$AnimatedSprite/forward.position
 		$AnimatedSprite/forward.rotation = -$AnimatedSprite/forward.rotation
+		$AnimatedSprite/forward2.position = -$AnimatedSprite/forward2.position
+		$AnimatedSprite/forward2.rotation = -$AnimatedSprite/forward2.rotation
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 
 func _on_top_hit_body_entered(body):

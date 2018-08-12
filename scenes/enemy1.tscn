@@ -1,17 +1,64 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/enemy1.gd" type="Script" id=1]
-[ext_resource path="res://PlayerCharacterScaleTest.png" type="Texture" id=2]
-[ext_resource path="res://addons/Ren/nodes/character.gd" type="Script" id=3]
-[ext_resource path="res://addons/Ren/icons/ren_character.svg" type="Texture" id=4]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_000.png" type="Texture" id=2]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_001.png" type="Texture" id=3]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_002.png" type="Texture" id=4]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_003.png" type="Texture" id=5]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_004.png" type="Texture" id=6]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_005.png" type="Texture" id=7]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_006.png" type="Texture" id=8]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_007.png" type="Texture" id=9]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_008.png" type="Texture" id=10]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_009.png" type="Texture" id=11]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_002.png" type="Texture" id=12]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_003.png" type="Texture" id=13]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_006.png" type="Texture" id=14]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_007.png" type="Texture" id=15]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_008.png" type="Texture" id=16]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_009.png" type="Texture" id=17]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_000.png" type="Texture" id=18]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_001.png" type="Texture" id=19]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_002.png" type="Texture" id=20]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_003.png" type="Texture" id=21]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_004.png" type="Texture" id=22]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_005.png" type="Texture" id=23]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_006.png" type="Texture" id=24]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_007.png" type="Texture" id=25]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_008.png" type="Texture" id=26]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_009.png" type="Texture" id=27]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_001.png" type="Texture" id=28]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_002.png" type="Texture" id=29]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_003.png" type="Texture" id=30]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_004.png" type="Texture" id=31]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_005.png" type="Texture" id=32]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_006.png" type="Texture" id=33]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_007.png" type="Texture" id=34]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_008.png" type="Texture" id=35]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_009.png" type="Texture" id=36]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
+"name": "idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "throw",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": false,
+"name": "die",
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -23,9 +70,9 @@ height = 27.424
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.8651, 9.38346 )
+extents = Vector2( 15.9095, 3.69846 )
 
-[node name="enemy1" type="KinematicBody2D"]
+[node name="enemy1" type="KinematicBody2D" index="0"]
 
 z_index = 1
 input_pickable = false
@@ -34,10 +81,6 @@ collision_mask = 4
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-character_id = ""
-character_name = ""
-color = Color( 1, 1, 1, 1 )
-avatar = null
 speed = 50
 motion = Vector2( 0, 0 )
 jump_height = -1000
@@ -52,12 +95,14 @@ slope_angle = 1.309
 modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
-animation = "default"
+animation = "walk"
+frame = 4
+playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="down" type="RayCast2D" parent="AnimatedSprite" index="0"]
 
-position = Vector2( 80, 0 )
+position = Vector2( -80, 0 )
 scale = Vector2( 5, 5 )
 enabled = true
 exclude_parent = true
@@ -67,8 +112,19 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="forward" type="RayCast2D" parent="AnimatedSprite" index="1"]
 
-position = Vector2( 100, 0 )
-rotation = -1.5708
+position = Vector2( -80, 40 )
+rotation = 1.5708
+scale = Vector2( 5, 5 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 4
+_sections_unfolded = [ "Transform" ]
+
+[node name="forward2" type="RayCast2D" parent="AnimatedSprite" index="2"]
+
+position = Vector2( -80, -40 )
+rotation = 1.5708
 scale = Vector2( 5, 5 )
 enabled = true
 exclude_parent = true
@@ -96,7 +152,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_hit" index="0"]
 
-position = Vector2( -0.231968, -16.2375 )
+position = Vector2( 3.49488, -23.5627 )
 shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="." index="3"]
@@ -105,19 +161,6 @@ process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
-
-[node name="Character" type="Node" parent="." index="4"]
-
-script = ExtResource( 3 )
-__meta__ = {
-"_editor_icon": ExtResource( 4 )
-}
-character_id = ""
-character_name = ""
-color = Color( 1, 1, 1, 1 )
-prefix = ""
-suffix = ""
-avatar = null
 
 [connection signal="body_entered" from="top_hit" to="." method="_on_top_hit_body_entered"]
 
