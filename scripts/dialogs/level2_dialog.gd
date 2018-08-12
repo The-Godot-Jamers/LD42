@@ -22,7 +22,7 @@ func story(dialog_name):
 		"0":
 			Ren.say({
 			"what": """
-				Your next taks is to kill bots that tray to sell to as bad games.
+				Your next task is to kill bots that try to sell bad games.
 				"""
 			})
 			

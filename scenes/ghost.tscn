@@ -2,11 +2,11 @@
 
 [ext_resource path="res://scripts/ghost.gd" type="Script" id=1]
 
-[node name="ghost" type="Sprite"]
+[node name="ghost" type="Sprite" index="0"]
 
 script = ExtResource( 1 )
-ghost_time = 0.6
-ghost_alpha_start = 0.5
+ghost_time = 0.4
+ghost_alpha_start = 0.4
 ghost_alpha_end = 0.1
 
 [node name="Tween" type="Tween" parent="." index="0"]

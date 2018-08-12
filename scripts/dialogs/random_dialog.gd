@@ -1,7 +1,7 @@
 extends Node
 
 var parent
-var random_max = 13
+var random_max = 17
 
 func _ready():
 	Ren.connect("story_step", self, "story")
@@ -76,3 +76,16 @@ func story(dialog_name):
 		
 		"13":
 			random_say("STS: Slower than sound")
+		
+		"14":
+			random_say("Wrath of the Pachinko Horde")
+		
+		"15":
+			random_say("Iron Pogo Melee")
+		
+		"16":
+			random_say("Iron Pogo Melee")
+		
+		"17":
+			random_say("The Binding of Samuel Jackson")
+		

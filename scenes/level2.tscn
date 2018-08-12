@@ -5,7 +5,7 @@
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://scripts/dialogs/level2_dialog.gd" type="Script" id=4]
 
-[node name="level2" type="Node" index="0"]
+[node name="level2" type="Node"]
 
 script = ExtResource( 1 )
 

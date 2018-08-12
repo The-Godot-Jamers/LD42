@@ -32,8 +32,8 @@ func story(dialog_name):
 		"0":
 			Ren.say({
 			"what": """
-				Welcome new bot currator in Dream digital shop for games.
-				Your job is to collet the best games for our players.
+				Welcome new curator bot in Dream digital shop for games.
+				Your job is to collect the best games for our players.
 				You need to 15 collect boxes with good games.
 				"""
 			})

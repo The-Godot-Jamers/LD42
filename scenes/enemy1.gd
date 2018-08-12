@@ -76,14 +76,19 @@ func _on_Area2D_body_entered(body):
 		return
 	if is_in_group("dead"):
 		return
-	$DialogNode.on_active_dialog()
+	if $death_timer.is_stopped():
+		$DialogNode.on_active_dialog()
 
 func _on_top_hit_area_entered(area):
-	if area.get_parent().state == "fall":
-		$DialogNode.disconnect("story_step", self, "story")
-		Globals.score += 1
-		$AnimatedSprite.animation = "die"
-		$death_timer.start()
+	print("1")
+	if area.get_parent().state == "fall" or area.get_parent().state == "land":
+		print("2")
+		if $death_timer.is_stopped():
+			print("3")
+			$DialogNode.disconnect("story_step", self, "story")
+			Globals.score += 1
+			$AnimatedSprite.animation = "die"
+			$death_timer.start()
 
 func _on_death_timer_timeout():
 	add_to_group("dead")

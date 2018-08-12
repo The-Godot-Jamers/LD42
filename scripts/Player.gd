@@ -25,6 +25,8 @@ func check_state():
 	if !is_on_floor():
 		if motion.y > 100:
 			state = "fall"
+			if motion.y > 800:
+				state = "land"
 		elif motion.y < 0:
 			state = "jump"
 	else: 
@@ -40,6 +42,8 @@ func set_animation():
 		$AnimatedSprite.animation = "jump"
 	elif state == "fall":
 		$AnimatedSprite.animation = "fall"
+	elif state == "land":
+		$AnimatedSprite.animation = "land"
 	elif state == "idle":
 		$AnimatedSprite.animation = "idle"
 

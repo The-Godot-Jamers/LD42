@@ -120,7 +120,7 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 15.5379, 2.80431 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 z_index = 1
 input_pickable = false
@@ -142,7 +142,7 @@ slope_angle = 1.309
 
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "fall"
 playing = true
 _sections_unfolded = [ "Transform" ]
 
