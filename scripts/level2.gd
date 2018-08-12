@@ -12,6 +12,7 @@ func _ready():
 	for z in 15:
 		z = load("res://scenes/enemy1.tscn").instance()
 		z.position = Vector2(rand_range(50,3000),rand_range(-500,500))
+		add_child(z)
 		var pos = $TileMap.world_to_map(z.position)
 		pos.x -=1
 		pos.y -=1
@@ -21,4 +22,3 @@ func _ready():
 					$TileMap.set_cellv(pos,-1)
 				pos.y +=1
 			pos.x +=1
-		add_child(z)

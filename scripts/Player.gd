@@ -10,13 +10,34 @@ export var stop_min_velocity = 5
 export var max_bounces = 4
 export var slope_angle = 1.308996939
 
+var state = "idle"
 
 
 func _physics_process(delta):
 	fall(delta)
 	run()
 	jump()
+	check_state()
+	set_animation()
 	motion = move_and_slide(motion,UP,stop_min_velocity,max_bounces,slope_angle) # extra arguments for better scaling slopes
+
+func check_state():
+	if is_on_floor():
+		if motion.x == 0.0:
+			state = "idle"
+		else:
+			state = "run"
+#	else: #commented for now as no animations for these
+#		if motion.y >= 0:
+#			state = "falling"
+#		else:
+#			state = "jump"
+
+func set_animation():
+	if state != "run":
+		$AnimatedSprite.animation = "idle"
+	else:
+		$AnimatedSprite.animation = "run"
 
 func fall(delta):
 	if is_on_floor() or is_on_ceiling():

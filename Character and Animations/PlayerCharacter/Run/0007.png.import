@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0004.png-b3f443efa803f107c8518d82177c2534.stex"
+path="res://.import/0007.png-f1f1b4d8d586c4f3238471eb2ced62d9.stex"
 
 [deps]
 
-source_file="res://Character and Animations/LD42Enemy1/PlayerCharacter/Run/0004.png"
-dest_files=[ "res://.import/0004.png-b3f443efa803f107c8518d82177c2534.stex" ]
+source_file="res://Character and Animations/PlayerCharacter/Run/0007.png"
+dest_files=[ "res://.import/0007.png-f1f1b4d8d586c4f3238471eb2ced62d9.stex" ]
 
 [params]
 
