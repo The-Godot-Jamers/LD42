@@ -73,12 +73,12 @@ height = 27.424
 custom_solver_bias = 0.0
 extents = Vector2( 15.9095, 3.69846 )
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-radius = 33.3471
+extents = Vector2( 27.0751, 24.7803 )
 
-[node name="enemy1" type="KinematicBody2D"]
+[node name="enemy1" type="KinematicBody2D" index="0"]
 
 z_index = 1
 input_pickable = false
@@ -105,6 +105,7 @@ modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walk"
+frame = 3
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -177,7 +178,6 @@ script = ExtResource( 37 )
 
 [node name="Area2D" type="Area2D" parent="." index="5"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -188,7 +188,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 5.26654, -0.263145 )
+position = Vector2( 2.15639, 5.263 )
+scale = Vector2( 0.990123, 1 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="top_hit" to="." method="_on_top_hit_body_entered"]
