@@ -17,6 +17,19 @@ export var max_bounces = 4
 export var slope_angle = 1.308996939
 
 var start = true
+var kwargs = {}
+
+func _ready():
+	set_kwargs({"name": character_name})
+	set_kwargs({"color":color.to_html()})
+	if avatar != null:
+		set_kwargs({"avatar":avatar.resource_path})
+	Ren.character(character_id, kwargs, self)
+
+func set_kwargs(new_kwargs):
+	# update character
+	for kws in new_kwargs:
+		kwargs[kws] = new_kwargs[kws]
 
 func _physics_process(delta):
 	fall(delta)
