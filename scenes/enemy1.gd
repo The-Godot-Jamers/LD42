@@ -76,6 +76,12 @@ func set_color(value):
 func get_color():
 	return $Character.color
 
+func set_avatar(value):
+	$Character.avatar = value
+
+func get_avatar():
+	return $Character.avatar
+
 func set_dialog_script():
 	$DialogNode.set_script(dialog_script)
 
