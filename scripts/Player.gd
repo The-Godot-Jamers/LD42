@@ -18,26 +18,30 @@ func _physics_process(delta):
 	run()
 	jump()
 	check_state()
-	set_animation()
 	motion = move_and_slide(motion,UP,stop_min_velocity,max_bounces,slope_angle) # extra arguments for better scaling slopes
+	set_animation()
 
 func check_state():
-	if is_on_floor():
+	if !is_on_floor():
+		if motion.y > 100:
+			state = "fall"
+		elif motion.y < 0:
+			state = "jump"
+	else: 
 		if motion.x == 0.0:
 			state = "idle"
 		else:
 			state = "run"
-#	else: #commented for now as no animations for these
-#		if motion.y >= 0:
-#			state = "falling"
-#		else:
-#			state = "jump"
 
 func set_animation():
-	if state != "run":
-		$AnimatedSprite.animation = "idle"
-	else:
+	if state == "run":
 		$AnimatedSprite.animation = "run"
+	elif state == "jump":
+		$AnimatedSprite.animation = "jump"
+	elif state == "fall":
+		$AnimatedSprite.animation = "fall"
+	elif state == "idle":
+		$AnimatedSprite.animation = "idle"
 
 func fall(delta):
 	if is_on_floor() or is_on_ceiling():
