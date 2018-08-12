@@ -11,6 +11,16 @@ func _ready():
 	Ren.start()
 	Globals.active_ren()
 
+func portal_text():
+	Ren.jump(
+		"intro",
+		name,
+		str(1),
+		false
+	)
+	Ren.start()
+	Globals.active_ren()
+	
 func story(dialog_name):
 	if dialog_name != name:
 		return

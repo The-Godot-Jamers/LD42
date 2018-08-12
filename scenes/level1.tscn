@@ -25,11 +25,11 @@ tracks/0/keys = {
 "values": [ Vector2( 958.449, 710.249 ), Vector2( 958.449, 515 ) ]
 }
 
-[node name="level1" type="Node"]
+[node name="level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
-game_xpos_min = 35
-game_xpos_max = 735
+game_xpos_min = 70
+game_xpos_max = 900
 time_scale = 0.1
 minimum_interval = 0.3
 needed_points = 20
@@ -85,6 +85,11 @@ blend_times = [  ]
 [node name="DialogNode" type="Node" parent="." index="4"]
 
 script = ExtResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="." index="5"]
+
+position = Vector2( 890.838, 18.0881 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

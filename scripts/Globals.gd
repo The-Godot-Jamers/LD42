@@ -11,6 +11,11 @@ func _ready():
 	else:
 		pass
 
+func _process(delta):
+	var dead = get_tree().get_nodes_in_group("dead")
+	for i in dead:
+		i.queue_free()
+
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()

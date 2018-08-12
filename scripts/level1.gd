@@ -1,7 +1,7 @@
 extends Node
 
-export var game_xpos_min = 35
-export var game_xpos_max = 735
+export var game_xpos_min = 70
+export var game_xpos_max = 900
 export var time_scale = 0.1
 export var minimum_interval = 0.3
 
@@ -15,6 +15,7 @@ func _on_Timer_timeout():
 func _process(delta):
 	if Globals.score == needed_points:
 		$portal/AnimationPlayer.play("portal")
+		$DialogNode.portal_text()
 
 func add_games():
 	var i = game.instance()
