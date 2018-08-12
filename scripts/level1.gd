@@ -4,12 +4,16 @@ export var game_xpos_min = 35
 export var game_xpos_max = 735
 export var time_scale = 0.1
 
-
+export var needed_points = 20
 var game = preload("res://scenes/game.tscn")
 
 func _on_Timer_timeout():
 	add_games()
 	$Timer.wait_time = clamp($Timer.wait_time - time_scale, 0.1, $Timer.wait_time)
+
+func _process(delta):
+	if Globals.score == needed_points:
+		$portal/AnimationPlayer.play("portal")
 
 func add_games():
 	var i = game.instance()
@@ -33,3 +37,5 @@ func add_games():
 		i.add_to_group("bad")
 		i.remove_pickup()
 
+func _on_portal_body_entered(body):
+	get_tree().change_scene_to(load("res://scenes/level2.tscn"))
