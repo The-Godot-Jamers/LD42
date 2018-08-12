@@ -66,7 +66,7 @@ func jump():
 			motion.y = jump_height
 			$AudioStreamPlayer.play()
 	
-	
+
 
 func _on_ghost_timer_timeout():
 	#if motion.x >= 0.0 or motion.y >= 0.0:
@@ -76,3 +76,9 @@ func _on_ghost_timer_timeout():
 	ghost.scale = $AnimatedSprite.scale
 	ghost.flip_h = $AnimatedSprite.flip_h
 	ghost.texture = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation,$AnimatedSprite.frame)
+
+
+func _on_boot_area_area_entered(area):
+	motion.y = jump_height
+	$AudioStreamPlayer.play()
+	

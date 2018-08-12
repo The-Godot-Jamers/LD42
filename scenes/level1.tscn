@@ -25,14 +25,14 @@ tracks/0/keys = {
 "values": [ Vector2( 958.449, 710.249 ), Vector2( 958.449, 515 ) ]
 }
 
-[node name="level1" type="Node" index="0"]
+[node name="level1" type="Node"]
 
 script = ExtResource( 1 )
 game_xpos_min = 70
 game_xpos_max = 900
 time_scale = 0.1
 minimum_interval = 0.3
-needed_points = 20
+needed_points = 15
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 

@@ -1,20 +1,21 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ren_gui/Window.tscn" type="PackedScene" id=2]
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=3]
 [ext_resource path="res://gfx/Goodgame.png" type="Texture" id=4]
-[ext_resource path="res://ubuntu-font-family/Ubuntu-B.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://gfx/mobile/blue_sliderLeft.png" type="Texture" id=6]
-[ext_resource path="res://gfx/mobile/blue_sliderRight.png" type="Texture" id=7]
-[ext_resource path="res://gfx/mobile/blue_sliderUp.png" type="Texture" id=8]
+[ext_resource path="res://gfx/gamepad.png" type="Texture" id=5]
+[ext_resource path="res://ubuntu-font-family/Ubuntu-B.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://gfx/mobile/blue_sliderLeft.png" type="Texture" id=7]
+[ext_resource path="res://gfx/mobile/blue_sliderRight.png" type="Texture" id=8]
+[ext_resource path="res://gfx/mobile/blue_sliderUp.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 22
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=2]
@@ -124,6 +125,25 @@ texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/TextureRect" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -25.0
+margin_right = 25.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
 [node name="Label" type="Label" parent="TextureRect/HBoxContainer" index="1"]
 
 anchor_left = 0.0
@@ -195,7 +215,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 7 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="right" type="TextureButton" parent="mobile" index="1"]
@@ -220,7 +240,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 8 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="up" type="TextureButton" parent="mobile" index="2"]
@@ -245,7 +265,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
 [connection signal="pressed" from="mobile/left" to="." method="_on_left_pressed"]

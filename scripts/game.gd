@@ -3,6 +3,8 @@ extends RigidBody2D
 export var bottom = 700
 
 onready var sprite = $sprite
+onready var sprite2 = $sprite/sprite
+
 var picked = false
 
 func remove_pickup():

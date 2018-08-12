@@ -24,6 +24,7 @@ func add_games():
 	add_child(i)
 	if rand_range(0.0,1.0) >= 0.5:
 		i.sprite.texture = load("res://gfx/Goodgame.png")
+		i.sprite2.texture = load("res://gfx/gamepad.png")
 		i.add_to_group("good")
 	else:
 		if rand_range(0.0,1.0) <= 0.2:

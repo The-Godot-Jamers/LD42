@@ -6,6 +6,7 @@ var random_max = 13
 func _ready():
 	Ren.connect("story_step", self, "story")
 
+
 func on_active_dialog():
 	Ren.jump(
 		"enemy",
