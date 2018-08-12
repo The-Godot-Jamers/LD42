@@ -163,11 +163,23 @@ ChoiceButton = ExtResource( 4 )
 
 [node name="SayPanel" parent="InGameGUI" index="2" instance=ExtResource( 5 )]
 
+self_modulate = Color( 1, 1, 1, 0.601647 )
 margin_top = 7.0
-margin_right = 480.0
-margin_bottom = 172.0
+margin_right = 597.0
+margin_bottom = 226.0
 custom_styles/panel = SubResource( 1 )
 _sections_unfolded = [ "Anchor", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_styles" ]
+
+[node name="VBox" parent="InGameGUI/SayPanel" index="0"]
+
+margin_top = 13.0
+margin_right = 582.0
+margin_bottom = 188.0
+
+[node name="Dialog" parent="InGameGUI/SayPanel/VBox" index="1"]
+
+margin_right = 579.0
+margin_bottom = 175.0
 
 [node name="Notify" type="Panel" parent="InGameGUI" index="3"]
 
@@ -231,3 +243,4 @@ override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Size Flags" ]
 
 
+[editable path="InGameGUI/SayPanel"]
