@@ -9,7 +9,7 @@ func _ready():
 		false
 	)
 	Ren.start()
-	Globals.active_ren()
+	# Globals.active_ren()
 
 func story(dialog_name):
 	if dialog_name != name:
@@ -22,9 +22,7 @@ func story(dialog_name):
 		"0":
 			Ren.say({
 			"what": """
-				Welcome new bot currator in Dream digital shop for games.
-				Your job is to collet the best games for our players.
-				You need to 20 collect boxes with good games.
+				Your next taks is to kill bots that tray to sell to as bad games.
 				"""
 			})
 			
