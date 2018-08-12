@@ -10,7 +10,6 @@
 [ext_resource path="res://addons/Ren/nodes/ren_line_edit.gd" type="Script" id=8]
 [ext_resource path="res://addons/Ren/icons/ren_line_edit.svg" type="Texture" id=9]
 
-
 [sub_resource type="DynamicFont" id=1]
 
 size = 30
@@ -898,7 +897,6 @@ _sections_unfolded = [ "Anchor", "Mouse", "Rect", "Size Flags", "Theme", "custom
 __meta__ = {
 "_editor_icon": ExtResource( 2 )
 }
-step_time = 0.1
 name_label_path = NodePath("VBox/Label")
 dialog_label_path = NodePath("VBox/Dialog")
 avatar_viewport_path = NodePath("ViewportContainer/CharaterAvatar")
@@ -933,6 +931,7 @@ custom_fonts/bold_italics_font = SubResource( 2 )
 custom_fonts/italics_font = SubResource( 3 )
 custom_fonts/bold_font = SubResource( 4 )
 custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 0.0162462, 0.0705338, 0.0886296, 1 )
 scroll_active = false
 selection_enabled = false
 _sections_unfolded = [ "BBCode", "Rect", "Size Flags", "custom_colors" ]
@@ -943,7 +942,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 41.0
+margin_top = 50.0
 margin_right = 905.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )

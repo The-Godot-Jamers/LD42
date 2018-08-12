@@ -8,6 +8,7 @@ export(Color) var disable_text_color = Color( 0.533333, 0.533333, 0.498039, 0.53
 
 onready var label = RichTextLabel.new()
 var id = -1
+var mouse_entered = false
 
 func _ready():
 	connect("focus_entered", self, "_on_focus")
@@ -25,14 +26,18 @@ func _on_resized():
 
 func _on_idle():
 	label.add_color_override("default_color", idle_text_color)
+	mouse_entered = false
 
 func _on_focus():
 	label.add_color_override("default_color", focus_text_color)
+	mouse_entered = true
 
 func _on_hover():
 	label.add_color_override("default_color", hover_text_color)
 
 func _on_pressed(event):
+	if not mouse_entered:
+		return
 	if event.is_action_pressed("mouse_left"):
 		label.add_color_override("default_color", pressed_text_color)
 		print("final_choice ", id)

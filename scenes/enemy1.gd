@@ -1,10 +1,18 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
+<<<<<<< HEAD
 #export(String) var character_id = "" setget set_character_id, get_character_id
 #export(String) var character_name = "" setget set_character_name, get_character_name
 #export(Color) var color = Color("#ffffff") setget set_color, get_color
 #export(PackedScene) var avatar setget set_avatar, get_avatar
+=======
+export(String) var character_id = "" setget set_character_id, get_character_id
+export(String) var character_name = "" setget set_character_name, get_character_name
+export(Color) var color = Color("#ffffff") setget set_color, get_color
+export(PackedScene) var avatar setget set_avatar, get_avatar
+export(GDScript) var dialog_script = GDScript() setget set_dialog_script, get_dialog_script
+>>>>>>> a83d5c9a5ca54e2b23a0db4f8c3e7b7be1375eb4
 export var speed = 50
 export var motion = Vector2()
 export var jump_height = -1000
@@ -78,3 +86,15 @@ func set_color(value):
 
 func get_color():
 	return $Character.color
+
+func set_avatar(value):
+	$Character.avatar = value
+
+func get_avatar():
+	return $Character.avatar
+
+func set_dialog_script():
+	$DialogNode.set_script(dialog_script)
+
+func get_dialog_script():
+	return $DialogNode.get_script()
