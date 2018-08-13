@@ -13,7 +13,7 @@ func _on_Timer_timeout():
 	$Timer.wait_time = clamp($Timer.wait_time - time_scale, minimum_interval, $Timer.wait_time)
 
 func _process(delta):
-	if Globals.score == needed_points:
+	if Globals.lvl3_score == needed_points:
 		$portal/AnimationPlayer.play("portal")
 		$portal/portal_timer.start()
 		$DialogNode.portal_text()

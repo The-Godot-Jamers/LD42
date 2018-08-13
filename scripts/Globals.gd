@@ -1,11 +1,13 @@
 extends Node
 var score = 0 setget _set_score, _get_score
 var killed = 0 setget _set_killed, _get_killed
+var lvl3_score = 0 setget _set_lvl3_score, _get_lvl3_score
 onready var GUI = $GUI
 
 func _ready():
 	Ren.define("score", score)
 	Ren.define("killed", killed)
+	Ren.define("lvl3_score", lvl3_score)
 	GUI.update_gui(score)
 	randomize()
 	if OS.get_name() == "Android":
@@ -50,6 +52,12 @@ func _set_killed(value):
 
 func _get_score():
 	return Ren.get_value("score")
+
+func _get_lvl3_score():
+	return Ren.get_value("lvl3_score")
+
+func _set_lvl3_score(value):
+	Ren.define("lvl3_score", value)
 
 func active_ren():
 	GUI.show_ren()

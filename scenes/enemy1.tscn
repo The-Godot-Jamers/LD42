@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=2]
 
-[ext_resource path="res://scenes/enemy1.gd" type="Script" id=1]
+[ext_resource path="res://scripts/enemy1.gd" type="Script" id=1]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_000.png" type="Texture" id=2]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_001.png" type="Texture" id=3]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Idle/p2Idle_Player2_P2_Idle_002.png" type="Texture" id=4]
@@ -36,6 +36,7 @@
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_007.png" type="Texture" id=34]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_008.png" type="Texture" id=35]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_009.png" type="Texture" id=36]
+
 
 [sub_resource type="SpriteFrames" id=1]
 
