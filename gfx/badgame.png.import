@@ -7,10 +7,7 @@ path="res://.import/badgame.png-413651891342c24ca6b813580e0a66d6.stex"
 [deps]
 
 source_file="res://gfx/badgame.png"
-source_md5="6dc0ac7e35f97c9eb1178d1bd860e3e9"
-
 dest_files=[ "res://.import/badgame.png-413651891342c24ca6b813580e0a66d6.stex" ]
-dest_md5="cc44d0a4afc42ca42256f66884480d26"
 
 [params]
 

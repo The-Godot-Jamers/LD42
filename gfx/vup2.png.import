@@ -7,10 +7,7 @@ path="res://.import/vup2.png-83719998960350638585408dc0c39bc2.stex"
 [deps]
 
 source_file="res://gfx/vup2.png"
-source_md5="d3484a817b93b8f33b18a9b7cf8537e2"
-
 dest_files=[ "res://.import/vup2.png-83719998960350638585408dc0c39bc2.stex" ]
-dest_md5="69b88f52ddf076742a75da10dc22419f"
 
 [params]
 
