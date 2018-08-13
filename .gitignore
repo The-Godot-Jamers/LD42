@@ -1,5 +1,6 @@
 # Godot-specific ignores
-.import/
+*.import
+# it will ignor .import dir and also all *.import files
 export.cfg
 export_presets.cfg
 
