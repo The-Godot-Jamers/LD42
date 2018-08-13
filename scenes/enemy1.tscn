@@ -77,7 +77,7 @@ extents = Vector2( 15.9095, 3.69846 )
 custom_solver_bias = 0.0
 extents = Vector2( 50.6204, 24.7803 )
 
-[node name="enemy1" type="KinematicBody2D"]
+[node name="enemy1" type="KinematicBody2D" index="0"]
 
 z_index = 1
 input_pickable = false
@@ -102,7 +102,7 @@ modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 4
+frame = 2
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -197,7 +197,7 @@ autostart = false
 
 process_mode = 1
 wait_time = 1.0
-one_shot = false
+one_shot = true
 autostart = false
 
 [connection signal="area_entered" from="top_hit" to="." method="_on_top_hit_area_entered"]

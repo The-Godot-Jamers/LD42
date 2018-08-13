@@ -11,7 +11,7 @@ func _process(delta):
 func _ready():
 	for i in 40:
 		var xx = rand_range(5,93)
-		var yy = rand_range(-16,16)
+		var yy = rand_range(-16,13)
 		$TileMap.set_cell(xx,yy,0)
 		$TileMap.set_cell(xx-1,yy,0)
 		$TileMap.set_cell(xx+1,yy,0)
