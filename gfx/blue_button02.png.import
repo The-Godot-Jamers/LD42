@@ -7,7 +7,10 @@ path="res://.import/blue_button02.png-e514f1c9c9ce204ec3d67777c73c1852.stex"
 [deps]
 
 source_file="res://gfx/blue_button02.png"
+source_md5="219f5210ff51621f0abe3eb77a329654"
+
 dest_files=[ "res://.import/blue_button02.png-e514f1c9c9ce204ec3d67777c73c1852.stex" ]
+dest_md5="27119bdeab60bc9d2f750cf10a94e0db"
 
 [params]
 

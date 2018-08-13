@@ -7,7 +7,10 @@ path="res://.import/warning.png-adfee83d610ebd8a1fa8fda9e1d8ca7b.stex"
 [deps]
 
 source_file="res://gfx/warning.png"
+source_md5="491c4a955102981d6f26bfacf3ff5f61"
+
 dest_files=[ "res://.import/warning.png-adfee83d610ebd8a1fa8fda9e1d8ca7b.stex" ]
+dest_md5="3fff787c3819da501c058e54b5f14b34"
 
 [params]
 
