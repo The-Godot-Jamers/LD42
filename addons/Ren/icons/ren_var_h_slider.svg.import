@@ -7,7 +7,10 @@ path="res://.import/ren_var_h_slider.svg-ce23fc73f7f6d612d95d886c237c743a.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_var_h_slider.svg"
+source_md5="82982aebaa0b4e06cdd840409e4f91fa"
+
 dest_files=[ "res://.import/ren_var_h_slider.svg-ce23fc73f7f6d612d95d886c237c743a.stex" ]
+dest_md5="a05152647a2c45db674bd41ee01e4148"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/Goodgame.png-d70c8d0feb6d6d8cd8ffefff1eccff69.stex"
 [deps]
 
 source_file="res://gfx/Goodgame.png"
+source_md5="4828fe50639d0654ea35f024ef494db7"
+
 dest_files=[ "res://.import/Goodgame.png-d70c8d0feb6d6d8cd8ffefff1eccff69.stex" ]
+dest_md5="4f65394c32f52e0745db6675c5b0832f"
 
 [params]
 

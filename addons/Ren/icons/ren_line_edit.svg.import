@@ -7,7 +7,10 @@ path="res://.import/ren_line_edit.svg-dadcb679736f581c6818f16f37b5754f.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_line_edit.svg"
+source_md5="e42fb56b551fb2fdf5a23167538dceaa"
+
 dest_files=[ "res://.import/ren_line_edit.svg-dadcb679736f581c6818f16f37b5754f.stex" ]
+dest_md5="275116f487d28706678c9c5327b7d0ec"
 
 [params]
 

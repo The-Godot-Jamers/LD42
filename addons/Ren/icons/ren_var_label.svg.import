@@ -7,7 +7,10 @@ path="res://.import/ren_var_label.svg-a9b7c87bba7fbcb1f04a53c5c64f2e95.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_var_label.svg"
+source_md5="0e651af23eb747f249d820d25464d600"
+
 dest_files=[ "res://.import/ren_var_label.svg-a9b7c87bba7fbcb1f04a53c5c64f2e95.stex" ]
+dest_md5="5df047dae560b1464d852b9cbbe49f77"
 
 [params]
 
