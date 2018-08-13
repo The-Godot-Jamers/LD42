@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/startup.gd" type="Script" id=1]
 [ext_resource path="res://sfx/click1.wav" type="AudioStream" id=2]
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=3]
 [ext_resource path="res://gfx/grey_boxCheckmark.png" type="Texture" id=4]
-[ext_resource path="res://Cover.png" type="Texture" id=5]
 
 [node name="startup" type="Node"]
 
@@ -14,6 +13,7 @@ script = ExtResource( 1 )
 
 stream = ExtResource( 2 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -24,7 +24,6 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 763.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -39,9 +38,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 35.0
+margin_left = 417.0
 margin_top = 222.0
-margin_right = 225.0
+margin_right = 607.0
 margin_bottom = 377.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -81,9 +80,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -7.5
+margin_top = -7.0
 margin_right = 20.0
-margin_bottom = 6.5
+margin_bottom = 7.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -214,12 +213,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility" ]
-
-[node name="Cover" type="Sprite" parent="CenterContainer" index="1"]
-
-position = Vector2( -380.91, 300.421 )
-scale = Vector2( 1.19002, 1.19002 )
-texture = ExtResource( 5 )
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
 
