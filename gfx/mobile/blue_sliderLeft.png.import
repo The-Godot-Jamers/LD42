@@ -7,7 +7,10 @@ path="res://.import/blue_sliderLeft.png-6c9ed7ee586b6fcc58411e8e825b7f08.stex"
 [deps]
 
 source_file="res://gfx/mobile/blue_sliderLeft.png"
+source_md5="0c2067a4fd36c03a74dc637e4accf04f"
+
 dest_files=[ "res://.import/blue_sliderLeft.png-6c9ed7ee586b6fcc58411e8e825b7f08.stex" ]
+dest_md5="c779fe273c1a767c3cf08819452e4a89"
 
 [params]
 

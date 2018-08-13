@@ -7,7 +7,10 @@ path="res://.import/ren_texture_progress.svg-35dc5cb3afc33482519118de0684527e.st
 [deps]
 
 source_file="res://addons/Ren/icons/ren_texture_progress.svg"
+source_md5="a776c04f8fcbac202990a7b3b3ac557c"
+
 dest_files=[ "res://.import/ren_texture_progress.svg-35dc5cb3afc33482519118de0684527e.stex" ]
+dest_md5="ae2db59ede130f8e4fa7009219a7cc71"
 
 [params]
 

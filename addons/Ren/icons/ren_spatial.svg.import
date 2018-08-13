@@ -7,7 +7,10 @@ path="res://.import/ren_spatial.svg-940dd5db04a75460b9e762c2ecefa435.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_spatial.svg"
+source_md5="7e13d9b6cc7da966873bf67d066df97a"
+
 dest_files=[ "res://.import/ren_spatial.svg-940dd5db04a75460b9e762c2ecefa435.stex" ]
+dest_md5="494c5271b4b7a8aca426f177c692177a"
 
 [params]
 
