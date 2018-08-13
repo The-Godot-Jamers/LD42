@@ -25,7 +25,7 @@ tracks/0/keys = {
 "values": [ Vector2( 3130.51, 700.063 ), Vector2( 3126.83, 479.07 ) ]
 }
 
-[node name="level2" type="Node" index="0"]
+[node name="level2" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
