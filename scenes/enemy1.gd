@@ -70,9 +70,9 @@ func throw_rubbish():
 		var thrown = game.instance()
 		thrown.position = position
 		if $AnimatedSprite.flip_h == false:
-			thrown.apply_impulse(Vector2(),Vector2(3000, -5000))
+			thrown.apply_impulse(Vector2(),Vector2(3000, -2000))
 		else:
-			thrown.apply_impulse(Vector2(),Vector2(-3000, -5000))
+			thrown.apply_impulse(Vector2(),Vector2(-3000, -2000))
 		get_parent().add_child(thrown)
 
 func _on_top_hit_area_entered(area):

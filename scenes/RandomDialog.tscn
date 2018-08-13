@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/Enem_Avatar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/DreamAvatar.tscn" type="PackedScene" id=5]
 
-[node name="RandomDialog" type="Node"]
+[node name="RandomDialog" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )

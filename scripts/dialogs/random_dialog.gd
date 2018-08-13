@@ -5,7 +5,7 @@ var random_max = 18
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
 	Ren.connect("story_step", self, "story")
-	$PauseTimer.connect("timeout", self, "on_timeout")
+	#$PauseTimer.connect("timeout", self, "on_timeout")
 
 func on_active_dialog():
 	Ren.jump(
@@ -15,11 +15,12 @@ func on_active_dialog():
 		false
 	)
 	Ren.start()
-	get_tree().paused = true
-	$PauseTimer.start()
+	#get_tree().paused = true
+	#$PauseTimer.start()
 
 func on_timeout():
-	get_tree().paused = false
+	#get_tree().paused = false
+	pass
 
 func get_random():
 	randomize()
