@@ -12,13 +12,8 @@ func _ready():
 	Globals.active_ren()
 
 func portal_text():
-	Ren.jump(
-		"intro",
-		name,
-		str(1),
-		false
-	)
-	Ren.start()
+	Ren.story_state = str(1)
+	Ren.story_step()
 	Globals.active_ren()
 	
 func story(dialog_name):
@@ -31,6 +26,7 @@ func story(dialog_name):
 	match Ren.story_state:
 		"0":
 			Ren.say({
+			"who":"dream",
 			"what": """
 				Welcome new curator bot in Dream digital shop for games.
 				Your job is to collect the best games for our players.
@@ -39,6 +35,7 @@ func story(dialog_name):
 			})
 		"1":
 			Ren.say({
+			"who":"dream",
 			"what": """
 				Get to the portal.
 				"""
