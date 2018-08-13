@@ -20,7 +20,6 @@ func _ready():
 	add_to_group("enemies")
 	set_kwargs({"name": character_name})
 	Ren.character(character_id, kwargs, self)
-	$DialogNode.parent = name
 
 func set_kwargs(new_kwargs):
 	# update character
@@ -77,12 +76,12 @@ func _on_Area2D_body_entered(body):
 	if is_in_group("dead"):
 		return
 	if $death_timer.is_stopped():
-		$DialogNode.on_active_dialog()
+		RandomDialog.on_active_dialog()
 
 func _on_top_hit_area_entered(area):
 	if area.get_parent().state == "fall" or area.get_parent().state == "land":
 		if $death_timer.is_stopped():
-			$DialogNode.disconnect("story_step", self, "story")
+			RandomDialog.disconnect("story_step", self, "story")
 			Globals.score += 1
 			$AnimatedSprite.animation = "die"
 			$death_timer.start()

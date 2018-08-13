@@ -1,16 +1,14 @@
 extends Node
 
-var parent
 var random_max = 17
 
 func _ready():
 	Ren.connect("story_step", self, "story")
 
-
 func on_active_dialog():
 	Ren.jump(
 		"enemy",
-		parent,
+		"random",
 		str(get_random()),
 		false
 	)
@@ -28,7 +26,7 @@ func random_say(what):
 	Ren.story_state = str(get_random())
 
 func story(dialog_name):
-	if dialog_name != parent:
+	if dialog_name != "random":
 		return
 	
 	if Ren.current_node != self:

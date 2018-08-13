@@ -18,6 +18,7 @@ config/icon="res://PlayerCharacterScaleTest.png"
 
 Globals="*res://scenes/Globals.tscn"
 Ren="*res://addons/Ren/Ren.tscn"
+RandomDialog="*res://scripts/dialogs/random_dialog.gd"
 
 [display]
 
