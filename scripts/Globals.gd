@@ -34,6 +34,7 @@ func gameover():
 
 func start():
 	score = 0
+	killed = 0
 	GUI.update_gui(score)
 	get_tree().change_scene_to(load("res://scenes/level1.tscn"))
 

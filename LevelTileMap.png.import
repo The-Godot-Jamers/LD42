@@ -7,10 +7,7 @@ path="res://.import/LevelTileMap.png-bf48dfadf6e6737c79da1f7436de0d44.stex"
 [deps]
 
 source_file="res://LevelTileMap.png"
-source_md5="3c8403c4bbf15f09f9f5479a63173596"
-
 dest_files=[ "res://.import/LevelTileMap.png-bf48dfadf6e6737c79da1f7436de0d44.stex" ]
-dest_md5="a114a836b57f50e8b05f4917b8aac6cf"
 
 [params]
 

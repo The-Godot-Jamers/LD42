@@ -43,7 +43,9 @@ func add_games():
 
 func _on_portal_body_entered(body):
 	Globals.active_ren()
-	get_tree().change_scene_to(load("res://scenes/level1.tscn"))
+	get_tree().change_scene_to(load("res://scenes/game_end.tscn"))
+	Globals.GUI.hide()
+	Globals.GUI.hide_ren()
 
 
 func _on_portal_timer_timeout():

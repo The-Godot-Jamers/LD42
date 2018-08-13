@@ -7,10 +7,7 @@ path="res://.import/boxCrate.png-e1d160b0eefb909c985da4d71c8619bd.stex"
 [deps]
 
 source_file="res://gfx/boxCrate.png"
-source_md5="f31c90f523ddd7cab7c1d6dcb7a1808f"
-
 dest_files=[ "res://.import/boxCrate.png-e1d160b0eefb909c985da4d71c8619bd.stex" ]
-dest_md5="e82fcf084697eac4a697959b9fbd004b"
 
 [params]
 

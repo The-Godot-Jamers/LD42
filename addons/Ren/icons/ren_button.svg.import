@@ -7,10 +7,7 @@ path="res://.import/ren_button.svg-95326d1457ff2d5a4f02cb9301826553.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_button.svg"
-source_md5="ce3a97c5d8fe0dd26b05f47ab642f2d8"
-
 dest_files=[ "res://.import/ren_button.svg-95326d1457ff2d5a4f02cb9301826553.stex" ]
-dest_md5="464bc88fc2c930aad518268e281d7b78"
 
 [params]
 
