@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ Vector2( 966.449, 674.05 ), Vector2( 957.449, 509.05 ) ]
 }
 
-[node name="level1" type="Node"]
+[node name="level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
