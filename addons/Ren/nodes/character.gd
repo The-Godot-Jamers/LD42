@@ -12,6 +12,7 @@ export(String) var suffix = "" setget set_suffix, get_suffix
 export(PackedScene) var avatar setget set_avatar, get_avatar
 
 func _ready():
+	print(kwargs)
 	Ren.character(character_id, kwargs, self)
 	Ren.debug(kwargs, kws, "Add Character " + character_id + " with ")
 

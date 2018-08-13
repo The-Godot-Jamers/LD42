@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
-export(String) var character_id = ""
-export(String) var character_name = ""
 
 export var speed = 50
 export var motion = Vector2()
@@ -14,17 +12,10 @@ export var max_bounces = 4
 export var slope_angle = 1.308996939
 
 var start = true
-var kwargs = {}
+
 
 func _ready():
 	add_to_group("enemies")
-	set_kwargs({"name": character_name})
-	Ren.character(character_id, kwargs, self)
-
-func set_kwargs(new_kwargs):
-	# update character
-	for kws in new_kwargs:
-		kwargs[kws] = new_kwargs[kws]
 
 func _physics_process(delta):
 	if $death_timer.is_stopped():

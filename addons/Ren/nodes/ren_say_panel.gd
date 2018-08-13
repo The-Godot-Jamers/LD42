@@ -2,10 +2,15 @@ extends Panel
 
 export(NodePath) var name_label_path = NodePath("")
 export(NodePath) var dialog_label_path = NodePath("")
+export(NodePath) var avatar_viewport_path = NodePath("")
 
 onready var NameLabel = get_node(name_label_path)
 onready var DialogText = get_node(dialog_label_path)
+onready var CharacterAvatar = get_node(avatar_viewport_path)
 
+
+var avatar_path = ""
+var avatar
 var _type
 var dialog_timer
 var typing = false
@@ -45,6 +50,25 @@ func _on_statement(type, kwargs):
 			writeDialog(kwargs.what, kwargs.speed)
 		else:
 			writeDialog(kwargs.what)
+
+	if "avatar" in kwargs:
+		if avatar != null:
+			avatar.free()
+
+		if kwargs.avatar != "":
+			avatar_path = kwargs.avatar
+			avatar = load(kwargs.avatar).instance()
+			CharacterAvatar.add_child(avatar)
+	
+	elif avatar != null:
+		var wr = weakref(avatar)
+		
+		if (!wr.get_ref()):
+			 # object is erased
+			avatar = null
+		else:
+			# object is fine so you can do something with it:
+			avatar.free()
 		
 	return
 

@@ -1,15 +1,11 @@
 extends Node
 
 var random_max = 17
-var pause_timer = Timer.new()
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
 	Ren.connect("story_step", self, "story")
-	pause_timer.one_shot = true
-	pause_timer.wait_time = 2
-	pause_timer.connect("timeout", self, "on_timeout")
-	add_child(pause_timer)
+	$PauseTimer.connect("timeout", self, "on_timeout")
 
 func on_active_dialog():
 	Ren.jump(
@@ -20,7 +16,7 @@ func on_active_dialog():
 	)
 	Ren.start()
 	get_tree().paused = true
-	pause_timer.start()
+	$PauseTimer.start()
 
 func on_timeout():
 	get_tree().paused = false
