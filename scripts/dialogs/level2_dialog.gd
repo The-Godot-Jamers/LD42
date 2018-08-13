@@ -11,6 +11,11 @@ func _ready():
 	Ren.start()
 	# Globals.active_ren()
 
+func portal_text():
+	Ren.story_state = str(1)
+	Ren.story_step()
+	#Globals.active_ren()
+
 func story(dialog_name):
 	if dialog_name != name:
 		return
@@ -26,5 +31,13 @@ func story(dialog_name):
 				Your next task is to kill bots that try to sell bad games.
 				"""
 			})
+		"1":
+			Ren.say({
+			"who":"dream",
+			"what": """
+				Get to the portal.
+				"""
+			})
+			
 			
 		

@@ -58,32 +58,28 @@ func run():
 		$AnimatedSprite/forward.rotation = -$AnimatedSprite/forward.rotation
 		$AnimatedSprite/forward2.position = -$AnimatedSprite/forward2.position
 		$AnimatedSprite/forward2.rotation = -$AnimatedSprite/forward2.rotation
+		$thow_area.rotation_degrees -= 180
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 
 	
 func _on_Timer_timeout():
 	start = !start
 
-func _on_Area2D_body_entered(body):
-	if body.name != "Player":
-		return
-	if is_in_group("dead"):
-		return
-	if $death_timer.is_stopped():
-		RandomDialog.on_active_dialog()
-		throw_rubbish()
-
 func throw_rubbish():
 	if $throw_timer.is_stopped():
 		var thrown = game.instance()
 		thrown.position = position
-		thrown.apply_impulse(Vector2(),Vector2(3000, -5000))
+		if $AnimatedSprite.flip_h == false:
+			thrown.apply_impulse(Vector2(),Vector2(3000, -5000))
+		else:
+			thrown.apply_impulse(Vector2(),Vector2(-3000, -5000))
 		get_parent().add_child(thrown)
 
 func _on_top_hit_area_entered(area):
 	if area.get_parent().state == "fall" or area.get_parent().state == "land":
 		if $death_timer.is_stopped():
-			Globals.score += 1
+			Globals.killed += 1
+			Globals.GUI.update_gui(Globals.killed + Globals.score)
 			$AnimatedSprite.animation = "die"
 			$death_timer.start()
 
@@ -91,6 +87,11 @@ func _on_death_timer_timeout():
 	add_to_group("dead")
 
 
-
-
-
+func _on_thow_area_body_entered(body):
+	if body.name != "Player":
+		return
+	if is_in_group("dead"):
+		return
+	if $death_timer.is_stopped():
+		RandomDialog.on_active_dialog()
+		throw_rubbish()

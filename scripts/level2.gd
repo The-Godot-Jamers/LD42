@@ -1,6 +1,12 @@
 extends Node
 
+export var needed_kills = 5
 
+func _process(delta):
+	if Globals.killed == needed_kills:
+		$portal/AnimationPlayer.play("portal")
+		$portal/portal_timer.start()
+		$DialogNode.portal_text()
 
 func _ready():
 	for i in 40:
@@ -23,3 +29,15 @@ func _ready():
 				pos.y +=1
 			pos.y -= 3
 			pos.x +=1
+
+
+func _on_portal_body_entered(body):
+	Globals.active_ren()
+	get_tree().change_scene_to(load("res://scenes/level3.tscn"))
+
+
+func _on_portal_timer_timeout():
+	$portal/AnimatedSprite.play("default")
+	
+
+

@@ -23,7 +23,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 30.0744, 37.6822 )
+extents = Vector2( 17.0177, 16.7548 )
 
 [node name="game_thrown" type="RigidBody2D"]
 
@@ -65,14 +65,12 @@ polygon = PoolVector2Array( -31.9329, -37.5245, -28.7773, -40.8378, 29.1277, -40
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 collision_layer = 2
-collision_mask = 5
 audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]

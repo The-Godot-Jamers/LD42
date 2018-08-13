@@ -1,9 +1,11 @@
 extends Node
 var score = 0 setget _set_score, _get_score
+var killed = 0 setget _set_killed, _get_killed
 onready var GUI = $GUI
 
 func _ready():
 	Ren.define("score", score)
+	Ren.define("killed", killed)
 	GUI.update_gui(score)
 	randomize()
 	if OS.get_name() == "Android":
@@ -38,6 +40,12 @@ func start():
 func _set_score(value):
 	Ren.define("score", value)
 	$GUI.update_gui(value)
+
+func _get_killed():
+	return Ren.get_value("killed")
+
+func _set_killed(value):
+	Ren.define("killed", value)
 
 func _get_score():
 	return Ren.get_value("score")
