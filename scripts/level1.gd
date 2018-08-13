@@ -15,6 +15,7 @@ func _on_Timer_timeout():
 func _process(delta):
 	if Globals.score == needed_points:
 		$portal/AnimationPlayer.play("portal")
+		$portal/portal_timer.start()
 		$DialogNode.portal_text()
 
 func add_games():
@@ -43,3 +44,7 @@ func add_games():
 func _on_portal_body_entered(body):
 	Globals.active_ren()
 	get_tree().change_scene_to(load("res://scenes/level2.tscn"))
+
+
+func _on_portal_timer_timeout():
+	$portal/AnimatedSprite.play("default")
