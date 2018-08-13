@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ Vector2( 958.449, 710.249 ), Vector2( 958.449, 515 ) ]
 }
 
-[node name="level1" type="Node" index="0"]
+[node name="level1" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -111,6 +111,13 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/portal = SubResource( 1 )
 blend_times = [  ]
+
+[node name="portal_timer" type="Timer" parent="portal" index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [node name="DialogNode" type="Node" parent="." index="5"]
 

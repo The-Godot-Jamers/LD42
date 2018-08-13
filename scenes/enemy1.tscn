@@ -77,7 +77,7 @@ extents = Vector2( 15.9095, 3.69846 )
 custom_solver_bias = 0.0
 extents = Vector2( 50.6204, 24.7803 )
 
-[node name="enemy1" type="KinematicBody2D" index="0"]
+[node name="enemy1" type="KinematicBody2D"]
 
 z_index = 1
 input_pickable = false
