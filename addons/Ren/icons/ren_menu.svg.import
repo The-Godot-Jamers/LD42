@@ -7,7 +7,10 @@ path="res://.import/ren_menu.svg-ff5a7dc625028ae84a4b3c4406d57206.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_menu.svg"
+source_md5="2b1bb236b848873a09ebce2c4b2ff16e"
+
 dest_files=[ "res://.import/ren_menu.svg-ff5a7dc625028ae84a4b3c4406d57206.stex" ]
+dest_md5="b279fd3cca5fed867b411f71cffef3e7"
 
 [params]
 

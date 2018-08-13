@@ -5,7 +5,7 @@
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=3]
 [ext_resource path="res://gfx/grey_boxCheckmark.png" type="Texture" id=4]
 
-[node name="startup" type="Node"]
+[node name="startup" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -13,7 +13,6 @@ script = ExtResource( 1 )
 
 stream = ExtResource( 2 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"

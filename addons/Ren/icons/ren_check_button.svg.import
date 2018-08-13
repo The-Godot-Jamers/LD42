@@ -7,7 +7,10 @@ path="res://.import/ren_check_button.svg-b2f833b40f2ab1811dd89f181078e643.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_check_button.svg"
+source_md5="556169b413a482a2f664de38cc3d81dc"
+
 dest_files=[ "res://.import/ren_check_button.svg-b2f833b40f2ab1811dd89f181078e643.stex" ]
+dest_md5="10949a31a414dca2d05892d9bcf56494"
 
 [params]
 
