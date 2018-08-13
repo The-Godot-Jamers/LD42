@@ -67,12 +67,14 @@ func _on_Timer_timeout():
 
 func throw_rubbish():
 	if $throw_timer.is_stopped():
+		$AnimatedSprite.animation = "throw"
 		var thrown = game.instance()
 		thrown.position = position
+		$throw_timer.start()
 		if $AnimatedSprite.flip_h == false:
-			thrown.apply_impulse(Vector2(),Vector2(3000, -2000))
+			thrown.apply_impulse(Vector2(),Vector2(-1000, -800))
 		else:
-			thrown.apply_impulse(Vector2(),Vector2(-3000, -2000))
+			thrown.apply_impulse(Vector2(),Vector2(1000, -800))
 		get_parent().add_child(thrown)
 
 func _on_top_hit_area_entered(area):
@@ -95,3 +97,4 @@ func _on_thow_area_body_entered(body):
 	if $death_timer.is_stopped():
 		RandomDialog.on_active_dialog()
 		throw_rubbish()
+

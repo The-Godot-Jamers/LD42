@@ -17,13 +17,13 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": false,
 "name": "boom",
-"speed": 5.0
+"speed": 2.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 17.0177, 16.7548 )
+extents = Vector2( 5.42632, 6.746 )
 
 [node name="game_thrown" type="RigidBody2D"]
 
@@ -50,18 +50,21 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
+scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
-animation = "boom"
+animation = "default"
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="AnimatedSprite" index="0"]
 
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
-visible = false
 build_mode = 0
-polygon = PoolVector2Array( -31.9329, -37.5245, -28.7773, -40.8378, 29.1277, -40.6801, 31.6522, -37.84, 31.9677, 37.2629, 28.4966, 40.8918, -28.7773, 41.0496, -31.7751, 37.2629 )
+polygon = PoolVector2Array( -6.41215, -7.52956, -5.75336, -8.17004, 5.75708, -8.20664, 6.39756, -7.58446, 6.39756, 7.6225, 5.90347, 8.29959, -5.78996, 8.24469, -6.43045, 7.6591 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
@@ -73,7 +76,7 @@ angular_damp = 1.0
 collision_layer = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
