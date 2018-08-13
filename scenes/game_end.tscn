@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/gameover.gd" type="Script" id=1]
-[ext_resource path="res://Ubu_font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://gfx/blue_button02.png" type="Texture" id=3]
-[ext_resource path="res://sfx/click1.wav" type="AudioStream" id=4]
+[ext_resource path="res://gfx/blue_button02.png" type="Texture" id=2]
+[ext_resource path="res://sfx/click1.wav" type="AudioStream" id=3]
 
-[node name="gameover" type="Node" index="0"]
+[node name="gameover" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -30,9 +29,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 417.0
-margin_top = 241.0
+margin_top = 248.0
 margin_right = 607.0
-margin_bottom = 359.0
+margin_bottom = 351.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -49,21 +48,20 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 190.0
-margin_bottom = 19.0
+margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 2 )
 text = "Congratulations!"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Visibility", "custom_fonts" ]
+_sections_unfolded = [ "Visibility" ]
 
 [node name="score" type="Label" parent="CenterContainer/VBoxContainer" index="1"]
 
@@ -72,16 +70,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 23.0
+margin_top = 18.0
 margin_right = 190.0
-margin_bottom = 42.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 2 )
 text = "score"
 align = 1
 valign = 1
@@ -97,16 +94,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 46.0
+margin_top = 36.0
 margin_right = 190.0
-margin_bottom = 65.0
+margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 2 )
 text = "Try to beat your score?"
 align = 1
 valign = 1
@@ -121,9 +117,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 69.0
+margin_top = 54.0
 margin_right = 190.0
-margin_bottom = 118.0
+margin_bottom = 103.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -135,7 +131,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 2 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/start" index="0"]
@@ -145,17 +141,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -25.0
-margin_top = -10.5
-margin_right = 33.0
-margin_bottom = 8.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 2 )
 text = "Restart"
 align = 1
 valign = 1
@@ -166,7 +161,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 3 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false

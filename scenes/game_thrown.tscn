@@ -25,7 +25,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 5.42632, 6.746 )
 
-[node name="game_thrown" type="RigidBody2D" index="0"]
+[node name="game_thrown" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 2
