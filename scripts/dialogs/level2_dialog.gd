@@ -21,6 +21,7 @@ func story(dialog_name):
 	match Ren.story_state:
 		"0":
 			Ren.say({
+			"who": "dream",
 			"what": """
 				Your next task is to kill bots that try to sell bad games.
 				"""

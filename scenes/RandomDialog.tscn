@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/dialogs/random_dialog.gd" type="Script" id=1]
 [ext_resource path="res://addons/Ren/nodes/character.gd" type="Script" id=2]
 [ext_resource path="res://addons/Ren/icons/ren_character.svg" type="Texture" id=3]
 [ext_resource path="res://scenes/Enem_Avatar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/DreamAvatar.tscn" type="PackedScene" id=5]
 
 [node name="RandomDialog" type="Node"]
 
@@ -30,5 +31,18 @@ color = Color( 0.786865, 0.181093, 0.181093, 1 )
 prefix = ""
 suffix = ""
 avatar = ExtResource( 4 )
+
+[node name="DreamCharacter" type="Node" parent="." index="2"]
+
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 3 )
+}
+character_id = "dream"
+character_name = "Dream Master Bot"
+color = Color( 1, 1, 1, 1 )
+prefix = ""
+suffix = ""
+avatar = ExtResource( 5 )
 
 

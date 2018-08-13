@@ -16,6 +16,7 @@ var start = true
 
 func _ready():
 	add_to_group("enemies")
+	$Timer.wait_time += rand_range(0.1, 0.5)
 
 func _physics_process(delta):
 	if $death_timer.is_stopped():

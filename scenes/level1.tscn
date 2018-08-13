@@ -23,7 +23,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 958.449, 710.249 ), Vector2( 958.449, 515 ) ]
+"values": [ Vector2( 966.449, 674.05 ), Vector2( 957.449, 509.05 ) ]
 }
 
 [node name="level1" type="Node" index="0"]
@@ -99,10 +99,21 @@ _sections_unfolded = [ "Cell", "Collision", "Z Index" ]
 
 [node name="portal" parent="." index="4" instance=ExtResource( 5 )]
 
+<<<<<<< HEAD
 position = Vector2( 925.635, 982.06 )
+=======
+position = Vector2( 966.449, 674.05 )
+>>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="portal" index="3"]
+[node name="portal_timer" type="Timer" parent="portal" index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="portal" index="4"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -124,5 +135,7 @@ _sections_unfolded = [ "Transform" ]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
+
+[connection signal="timeout" from="portal/portal_timer" to="." method="_on_portal_timer_timeout"]
 
 
