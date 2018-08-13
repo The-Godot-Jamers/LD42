@@ -81,7 +81,6 @@ func _on_Area2D_body_entered(body):
 func _on_top_hit_area_entered(area):
 	if area.get_parent().state == "fall" or area.get_parent().state == "land":
 		if $death_timer.is_stopped():
-			RandomDialog.disconnect("story_step", self, "story")
 			Globals.score += 1
 			$AnimatedSprite.animation = "die"
 			$death_timer.start()
