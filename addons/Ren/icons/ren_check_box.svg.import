@@ -7,7 +7,10 @@ path="res://.import/ren_check_box.svg-dab68efd996319588e5f7baf2ac7bd3a.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_check_box.svg"
+source_md5="9654417ce07a92d032eefb90b634920e"
+
 dest_files=[ "res://.import/ren_check_box.svg-dab68efd996319588e5f7baf2ac7bd3a.stex" ]
+dest_md5="224f5371dd9b1b770a1e8d635673250e"
 
 [params]
 

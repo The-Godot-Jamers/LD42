@@ -7,7 +7,10 @@ path="res://.import/Porotal_entity_000_NewAnimation_006.png-202f57be18f9351cc8da
 [deps]
 
 source_file="res://gfx/Porotal_entity_000_NewAnimation_006.png"
+source_md5="6579ee9ed108cc9a9cd1985c64807e24"
+
 dest_files=[ "res://.import/Porotal_entity_000_NewAnimation_006.png-202f57be18f9351cc8dacbdddb14e845.stex" ]
+dest_md5="37d2ad58ac5d3bebe264bb5968310e1a"
 
 [params]
 

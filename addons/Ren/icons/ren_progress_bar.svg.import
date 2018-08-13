@@ -7,7 +7,10 @@ path="res://.import/ren_progress_bar.svg-c16d07b6bc5d957eaa2e7da28127bd5c.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_progress_bar.svg"
+source_md5="07a4fe517c26f1fb4babadee463afb9d"
+
 dest_files=[ "res://.import/ren_progress_bar.svg-c16d07b6bc5d957eaa2e7da28127bd5c.stex" ]
+dest_md5="9603060062343e937b328aeb5e501b19"
 
 [params]
 
