@@ -75,7 +75,7 @@ extents = Vector2( 15.9095, 3.69846 )
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 27.0751, 24.7803 )
+extents = Vector2( 50.6204, 24.7803 )
 
 [node name="enemy1" type="KinematicBody2D"]
 
@@ -102,7 +102,7 @@ modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 1
+frame = 4
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -182,7 +182,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 2.15639, 5.263 )
+position = Vector2( -28.1077, 5.04835 )
 scale = Vector2( 0.990123, 1 )
 shape = SubResource( 4 )
 
@@ -191,6 +191,13 @@ shape = SubResource( 4 )
 process_mode = 1
 wait_time = 1.0
 one_shot = true
+autostart = false
+
+[node name="throw_timer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
 autostart = false
 
 [connection signal="area_entered" from="top_hit" to="." method="_on_top_hit_area_entered"]

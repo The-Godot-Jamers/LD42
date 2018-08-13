@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ Vector2( 966.449, 674.05 ), Vector2( 957.449, 509.05 ) ]
 }
 
-[node name="level1" type="Node" index="0"]
+[node name="level1" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -99,11 +99,7 @@ _sections_unfolded = [ "Cell", "Collision", "Z Index" ]
 
 [node name="portal" parent="." index="4" instance=ExtResource( 5 )]
 
-<<<<<<< HEAD
-position = Vector2( 925.635, 982.06 )
-=======
 position = Vector2( 966.449, 674.05 )
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="portal_timer" type="Timer" parent="portal" index="3"]

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=11 format=2]
-=======
 [gd_scene load_steps=10 format=2]
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 
 [ext_resource path="res://gfx/Porotal_entity_000_NewAnimation_000.png" type="Texture" id=1]
 [ext_resource path="res://gfx/Porotal_entity_000_NewAnimation_001.png" type="Texture" id=2]
@@ -10,27 +6,15 @@
 [ext_resource path="res://gfx/Porotal_entity_000_NewAnimation_004.png" type="Texture" id=4]
 [ext_resource path="res://gfx/Porotal_entity_000_NewAnimation_005.png" type="Texture" id=5]
 [ext_resource path="res://gfx/Porotal_entity_000_NewAnimation_006.png" type="Texture" id=6]
-<<<<<<< HEAD
-[ext_resource path="res://gfx/portal.png" type="Texture" id=7]
-=======
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-<<<<<<< HEAD
-"loop": true,
-"name": "default",
-"speed": 4.0
-} ]
-_sections_unfolded = [ "Resource" ]
-=======
 "loop": false,
 "name": "default",
 "speed": 10.0
 } ]
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -42,11 +26,7 @@ extents = Vector2( 29.9062, 29.835 )
 custom_solver_bias = 0.0
 radius = 120.0
 
-<<<<<<< HEAD
-[node name="portal" type="Area2D" index="0"]
-=======
 [node name="portal" type="Area2D"]
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -63,41 +43,17 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
-<<<<<<< HEAD
-position = Vector2( -1.6268, -1.5525 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 1 )
-animation = "default"
-frame = 3
-playing = true
-offset = Vector2( 0, -320 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
-
-visible = false
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-=======
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "default"
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 
 visible = false
 shape = SubResource( 2 )
 
-<<<<<<< HEAD
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
-=======
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 
 input_pickable = false
 collision_layer = 2048
@@ -110,10 +66,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
-<<<<<<< HEAD
-=======
 visible = false
->>>>>>> 0403b60d2a3b7d257497591a56a4141c8a1bb75c
 shape = SubResource( 3 )
 
 

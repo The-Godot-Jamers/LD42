@@ -1,6 +1,6 @@
 extends Node
 
-var random_max = 17
+var random_max = 18
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
@@ -93,4 +93,7 @@ func story(dialog_name):
 		
 		"17":
 			random_say("The Binding of Samuel Jackson")
+	
+		"18":
+			random_say("Hapsburg jaw: eating simulator")
 		

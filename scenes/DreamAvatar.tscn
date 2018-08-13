@@ -2,7 +2,7 @@
 
 [ext_resource path="res://tilesets/DresmSorFront.tres" type="TileSet" id=1]
 
-[node name="DreamAvatar" type="TileMap" index="0"]
+[node name="DreamAvatar" type="TileMap"]
 
 mode = 0
 tile_set = ExtResource( 1 )

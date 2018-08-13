@@ -7,41 +7,41 @@
 [ext_resource path="res://Character and Animations/PlayerCharacter/Idle/0003.png" type="Texture" id=5]
 [ext_resource path="res://Character and Animations/PlayerCharacter/Idle/0004.png" type="Texture" id=6]
 [ext_resource path="res://Character and Animations/PlayerCharacter/Idle/0005.png" type="Texture" id=7]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0000.png" type="Texture" id=8]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0001.png" type="Texture" id=9]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0002.png" type="Texture" id=10]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0003.png" type="Texture" id=11]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0004.png" type="Texture" id=12]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0005.png" type="Texture" id=13]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0006.png" type="Texture" id=14]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0007.png" type="Texture" id=15]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0008.png" type="Texture" id=16]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0009.png" type="Texture" id=17]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0010.png" type="Texture" id=18]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0011.png" type="Texture" id=19]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0012.png" type="Texture" id=20]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0013.png" type="Texture" id=21]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0014.png" type="Texture" id=22]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0011.png" type="Texture" id=23]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0012.png" type="Texture" id=24]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0013.png" type="Texture" id=25]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0014.png" type="Texture" id=26]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0015.png" type="Texture" id=27]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0016.png" type="Texture" id=28]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0017.png" type="Texture" id=29]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0018.png" type="Texture" id=30]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0019.png" type="Texture" id=31]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0000.png" type="Texture" id=32]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0001.png" type="Texture" id=33]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0002.png" type="Texture" id=34]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0003.png" type="Texture" id=35]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0004.png" type="Texture" id=36]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0005.png" type="Texture" id=37]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0006.png" type="Texture" id=38]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0007.png" type="Texture" id=39]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0008.png" type="Texture" id=40]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0009.png" type="Texture" id=41]
-[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0010.png" type="Texture" id=42]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0000.png" type="Texture" id=8]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0001.png" type="Texture" id=9]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0002.png" type="Texture" id=10]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0003.png" type="Texture" id=11]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0004.png" type="Texture" id=12]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0005.png" type="Texture" id=13]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0006.png" type="Texture" id=14]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0007.png" type="Texture" id=15]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0008.png" type="Texture" id=16]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0009.png" type="Texture" id=17]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Jump/0010.png" type="Texture" id=18]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0000.png" type="Texture" id=19]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0001.png" type="Texture" id=20]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0002.png" type="Texture" id=21]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0003.png" type="Texture" id=22]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0004.png" type="Texture" id=23]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0005.png" type="Texture" id=24]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0006.png" type="Texture" id=25]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0007.png" type="Texture" id=26]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0008.png" type="Texture" id=27]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0009.png" type="Texture" id=28]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0010.png" type="Texture" id=29]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0011.png" type="Texture" id=30]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0012.png" type="Texture" id=31]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0013.png" type="Texture" id=32]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Run/0014.png" type="Texture" id=33]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0011.png" type="Texture" id=34]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0012.png" type="Texture" id=35]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0013.png" type="Texture" id=36]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0014.png" type="Texture" id=37]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0015.png" type="Texture" id=38]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0016.png" type="Texture" id=39]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0017.png" type="Texture" id=40]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0018.png" type="Texture" id=41]
+[ext_resource path="res://Character and Animations/PlayerCharacter/Fall/0019.png" type="Texture" id=42]
 [ext_resource path="res://Character and Animations/PlayerCharacter/Land/0020.png" type="Texture" id=43]
 [ext_resource path="res://Character and Animations/PlayerCharacter/Land/0021.png" type="Texture" id=44]
 [ext_resource path="res://Character and Animations/PlayerCharacter/Land/0022.png" type="Texture" id=45]
@@ -58,20 +58,20 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
 "loop": true,
 "name": "run",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "fall",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
-"loop": true,
-"name": "jump",
-"speed": 10.0
 }, {
 "frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ) ],
 "loop": true,
@@ -120,7 +120,9 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 15.5379, 2.80431 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0" groups=[
+"player",
+]]
 
 z_index = 1
 input_pickable = false
@@ -156,6 +158,7 @@ shape = SubResource( 2 )
 
 stream = ExtResource( 48 )
 volume_db = -10.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"

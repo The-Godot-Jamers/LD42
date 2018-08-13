@@ -193,6 +193,7 @@ _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time" ]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -201,6 +202,7 @@ bus = "Master"
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"

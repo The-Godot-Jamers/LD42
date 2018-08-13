@@ -11,6 +11,8 @@ export var stop_min_velocity = 5
 export var max_bounces = 4
 export var slope_angle = 1.308996939
 
+var game = preload("res://scenes/game_thrown.tscn")
+
 var start = true
 
 
@@ -69,6 +71,14 @@ func _on_Area2D_body_entered(body):
 		return
 	if $death_timer.is_stopped():
 		RandomDialog.on_active_dialog()
+		throw_rubbish()
+
+func throw_rubbish():
+	if $throw_timer.is_stopped():
+		var thrown = game.instance()
+		thrown.position = position
+		thrown.apply_impulse(Vector2(),Vector2(3000, -5000))
+		get_parent().add_child(thrown)
 
 func _on_top_hit_area_entered(area):
 	if area.get_parent().state == "fall" or area.get_parent().state == "land":
