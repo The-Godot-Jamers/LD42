@@ -5,6 +5,8 @@ var lvl3_score = 0 setget _set_lvl3_score, _get_lvl3_score
 onready var GUI = $GUI
 var lvl = 1
 
+var ren_avatar = Node.new()
+
 func _ready():
 	Ren.define("score", score)
 	Ren.define("killed", killed)
@@ -64,3 +66,6 @@ func _set_lvl3_score(value):
 
 func active_ren():
 	GUI.show_ren()
+
+func disable_ren():
+	GUI.hide_ren()

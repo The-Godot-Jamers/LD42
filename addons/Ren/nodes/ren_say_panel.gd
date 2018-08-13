@@ -59,6 +59,7 @@ func _on_statement(type, kwargs):
 			avatar_path = kwargs.avatar
 			avatar = load(kwargs.avatar).instance()
 			CharacterAvatar.add_child(avatar)
+			Globals.ren_avatar = avatar
 	
 	elif avatar != null:
 		var wr = weakref(avatar)
