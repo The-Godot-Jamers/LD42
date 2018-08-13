@@ -7,7 +7,10 @@ path="res://.import/ren_control.svg-6f16dcbca85a6de38bd79121de35fa4e.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_control.svg"
+source_md5="fb7c4ae95fbc0da3c3c2970dfa07ab5e"
+
 dest_files=[ "res://.import/ren_control.svg-6f16dcbca85a6de38bd79121de35fa4e.stex" ]
+dest_md5="42c30205e00cb8c53acca041acf32441"
 
 [params]
 
