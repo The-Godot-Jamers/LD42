@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scripts/level3.gd" type="Script" id=1]
+[ext_resource path="res://scripts/level1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://tilesets/DresmSorFront.tres" type="TileSet" id=4]
 [ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/dialogs/level3_dialog.gd" type="Script" id=6]
+[ext_resource path="res://scripts/dialogs/level1_dialog.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ Vector2( 958.449, 710.249 ), Vector2( 958.449, 515 ) ]
 }
 
-[node name="level3" type="Node" index="0"]
+[node name="level1" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {
