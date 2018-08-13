@@ -1,0 +1,181 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://LevelTileMap.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BigD1A" type="Sprite" parent="." index="0"]
+
+position = Vector2( 1509.03, 1518.69 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 300, 300 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="BigD2A" type="Sprite" parent="." index="1"]
+
+position = Vector2( 1503.85, 5918.21 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 300, 300, 600 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="BigD1B" type="Sprite" parent="." index="2"]
+
+position = Vector2( 4486.67, 1528.02 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 300, 0, 300, 300 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="BigD2B" type="Sprite" parent="." index="3"]
+
+position = Vector2( 4514.73, 5876.1 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 300, 300, 300, 600 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Data1A" type="Sprite" parent="." index="4"]
+
+position = Vector2( 6955.26, 1528.02 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 600, 0, 200, 300 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Data2A" type="Sprite" parent="." index="5"]
+
+position = Vector2( 6983.31, 5932.2 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 600, 300, 200, 600 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Data1B" type="Sprite" parent="." index="6"]
+
+position = Vector2( 9003.06, 1499.97 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 800, 0, 200, 300 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Data2B" type="Sprite" parent="." index="7"]
+
+position = Vector2( 8996.67, 5876.1 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 800, 300, 200, 600 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="SmallD1" type="Sprite" parent="." index="8"]
+
+position = Vector2( 10718.7, 1054.41 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="SmallD1" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallD1/Area2D" index="0"]
+
+position = Vector2( 0.796143, 0.845894 )
+scale = Vector2( 4.95944, 4.91306 )
+shape = SubResource( 1 )
+
+[node name="SmallD2" type="Sprite" parent="." index="9"]
+
+position = Vector2( 10737.3, 2077.98 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 100, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Blank" type="Sprite" parent="." index="10"]
+
+position = Vector2( 10755.9, 3101.55 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 200, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Blank2" type="Sprite" parent="." index="11"]
+
+position = Vector2( 10755.9, 3101.55 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 300, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Blank3" type="Sprite" parent="." index="12"]
+
+position = Vector2( 10755.9, 4221.13 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Block1" type="Sprite" parent="." index="13"]
+
+position = Vector2( 10801.6, 5340.71 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 600, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Block2" type="Sprite" parent="." index="14"]
+
+position = Vector2( 10778.8, 6528.84 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 700, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Block3" type="Sprite" parent="." index="15"]
+
+position = Vector2( 10834.9, 7594.82 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 800, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+[node name="Block4" type="Sprite" parent="." index="16"]
+
+position = Vector2( 10862.9, 8660.8 )
+scale = Vector2( 9.92664, 9.71321 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 900, 900, 100, 100 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+
+
