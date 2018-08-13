@@ -33,6 +33,7 @@ func _ready():
 
 func _on_portal_body_entered(body):
 	Globals.active_ren()
+	Globals.lvl = 3
 	get_tree().change_scene_to(load("res://scenes/level3.tscn"))
 
 

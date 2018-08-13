@@ -101,7 +101,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[node name="level3" type="Node" index="0"]
+[node name="level3" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -208,7 +208,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 488.269, 238.198 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 22
+frame = 7
 playing = true
 
 [node name="SmallCartridge" type="AnimatedSprite" parent="." index="8"]
@@ -216,7 +216,7 @@ playing = true
 position = Vector2( 504.781, 521.735 )
 frames = SubResource( 3 )
 animation = "default"
-frame = 24
+frame = 6
 playing = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
