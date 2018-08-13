@@ -30,7 +30,7 @@ func story(dialog_name):
 			"what": """
 				Welcome new curator bot in Dream digital shop for games.
 				Your job is to collect the best games for our players.
-				You need to 15 collect boxes with good games.
+				You need to collect 15 boxes with good games.
 				"""
 			})
 		"1":

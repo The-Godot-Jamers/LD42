@@ -3,6 +3,9 @@ var score = 0 setget _set_score, _get_score
 var killed = 0 setget _set_killed, _get_killed
 var lvl3_score = 0 setget _set_lvl3_score, _get_lvl3_score
 onready var GUI = $GUI
+var lvl = 1
+
+var ren_avatar = Node.new()
 
 func _ready():
 	Ren.define("score", score)
@@ -25,7 +28,9 @@ func _input(event):
 		get_tree().quit()
 	if Input.is_action_just_pressed("ui_page_down"):
 		get_tree().change_scene_to(load("res://scenes/level2.tscn"))
+		lvl = 2
 	if Input.is_action_just_pressed("ui_focus_next"):
+		lvl = 3
 		get_tree().change_scene_to(load("res://scenes/level3.tscn"))
 
 func toggle_music():
@@ -61,3 +66,6 @@ func _set_lvl3_score(value):
 
 func active_ren():
 	GUI.show_ren()
+
+func disable_ren():
+	GUI.hide_ren()

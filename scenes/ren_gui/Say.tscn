@@ -880,7 +880,7 @@ tracks/11/keys = {
 "values": [ Vector2( 905, 59 ) ]
 }
 
-[node name="RenSayPanel" type="Panel"]
+[node name="RenSayPanel" type="Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -907,6 +907,7 @@ avatar_viewport_path = NodePath("ViewportContainer/CharaterAvatar")
 
 [node name="VBox" type="VBoxContainer" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

@@ -21,8 +21,12 @@ func _physics_process(delta):
 
 func _on_pickup_area_body_entered(body):
 	if not picked:
-		Globals.score += 1
-		Globals.GUI.update_gui(Globals.score)
+		if Globals.lvl == 1:
+			Globals.score += 1
+			Globals.GUI.update_gui(Globals.score + Globals.killed + Globals.lvl3_score)
+		elif Globals.lvl == 3:
+			Globals.lvl3_score +=1
+			Globals.GUI.update_gui(Globals.score + Globals.killed + Globals.lvl3_score)
 		$AnimationPlayer.play("bling")
 		$bling.play()
 		picked = true

@@ -29,7 +29,7 @@ func story(dialog_name):
 			"who":"dream",
 			"what": """
 				This is Gabe Renewal. He is your God! You will
-				reccomend good games for him and his players!
+				recommend good games for him and his players!
 				"""
 			})
 		"1":

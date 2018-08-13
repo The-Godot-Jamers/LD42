@@ -35,7 +35,7 @@ __meta__ = {
 game_xpos_min = 70
 game_xpos_max = 900
 time_scale = 0.1
-minimum_interval = 0.3
+minimum_interval = 0.15
 needed_points = 15
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]

@@ -21,22 +21,21 @@
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_007.png" type="Texture" id=19]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_008.png" type="Texture" id=20]
 [ext_resource path="res://Character and Animations/LD42Enemy1/p2AttackThrow/p2getsWish_Player2_P2_GotGoal_009.png" type="Texture" id=21]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_001.png" type="Texture" id=22]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_002.png" type="Texture" id=23]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_003.png" type="Texture" id=24]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_004.png" type="Texture" id=25]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_005.png" type="Texture" id=26]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_006.png" type="Texture" id=27]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_007.png" type="Texture" id=28]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_008.png" type="Texture" id=29]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_009.png" type="Texture" id=30]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_002.png" type="Texture" id=31]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_003.png" type="Texture" id=32]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_006.png" type="Texture" id=33]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_007.png" type="Texture" id=34]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_008.png" type="Texture" id=35]
-[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_009.png" type="Texture" id=36]
-
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_002.png" type="Texture" id=22]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_003.png" type="Texture" id=23]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_006.png" type="Texture" id=24]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_007.png" type="Texture" id=25]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_008.png" type="Texture" id=26]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Walk/p2Walk_Player2_Walk_009.png" type="Texture" id=27]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_001.png" type="Texture" id=28]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_002.png" type="Texture" id=29]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_003.png" type="Texture" id=30]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_004.png" type="Texture" id=31]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_005.png" type="Texture" id=32]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_006.png" type="Texture" id=33]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_007.png" type="Texture" id=34]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_008.png" type="Texture" id=35]
+[ext_resource path="res://Character and Animations/LD42Enemy1/p2Dies/p2Dies_Player2_P2_Death_009.png" type="Texture" id=36]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -51,14 +50,14 @@ animations = [ {
 "name": "throw",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
-"loop": false,
-"name": "die",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": false,
+"name": "die",
 "speed": 10.0
 } ]
 
@@ -103,7 +102,7 @@ modulate = Color( 0.0303802, 0.707031, 0.104389, 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 4
+frame = 5
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -197,7 +196,7 @@ autostart = false
 [node name="throw_timer" type="Timer" parent="." index="6"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.6
 one_shot = true
 autostart = false
 

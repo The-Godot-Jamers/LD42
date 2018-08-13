@@ -3,7 +3,7 @@ extends Node
 export var game_xpos_min = 70
 export var game_xpos_max = 900
 export var time_scale = 0.1
-export var minimum_interval = 0.3
+export var minimum_interval = 0.15
 
 export var needed_points = 15
 var game = preload("res://scenes/game.tscn")
@@ -43,6 +43,7 @@ func add_games():
 
 func _on_portal_body_entered(body):
 	Globals.active_ren()
+	Globals.lvl = 2
 	get_tree().change_scene_to(load("res://scenes/level2.tscn"))
 
 
