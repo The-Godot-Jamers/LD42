@@ -85,7 +85,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.1
 scale_random = 0.0
-color = Color( 1, 1, 1, 1 )
+color = Color( 1, 0, 0, 1 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -95,7 +95,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Scale", "Spread" ]
 
-[node name="game" type="RigidBody2D" groups=[
+[node name="game" type="RigidBody2D" index="0" groups=[
 "balls",
 ]]
 
