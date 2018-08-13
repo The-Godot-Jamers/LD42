@@ -10,6 +10,8 @@ func _on_start_pressed():
 	Globals.GUI.startup()
 	Globals.start()
 	Globals.score = 0
+	Globals.killed = 0
+	Globals.lvl3_score = 0
 	
 
 func _on_music_pressed():
