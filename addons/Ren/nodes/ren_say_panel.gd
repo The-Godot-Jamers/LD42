@@ -52,6 +52,7 @@ func _on_statement(type, kwargs):
 			writeDialog(kwargs.what)
 
 	if "avatar" in kwargs:
+		avatar = Globals.ren_avatar
 		if avatar != null:
 			avatar.free()
 
