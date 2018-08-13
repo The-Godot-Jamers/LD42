@@ -3,7 +3,7 @@ extends Node
 export var game_xpos_min = 70
 export var game_xpos_max = 900
 export var time_scale = 0.1
-export var minimum_interval = 0.3
+export var minimum_interval = 0.15
 
 export var needed_points = 15
 var game = preload("res://scenes/game.tscn")

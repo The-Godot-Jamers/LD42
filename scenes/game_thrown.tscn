@@ -6,8 +6,7 @@
 [ext_resource path="res://gfx/vup2.png" type="Texture" id=4]
 [ext_resource path="res://gfx/warning.png" type="Texture" id=5]
 
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
@@ -21,12 +20,12 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 5.42632, 6.746 )
 
-[node name="game_thrown" type="RigidBody2D"]
+[node name="game_thrown" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2
@@ -52,7 +51,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "default"
 _sections_unfolded = [ "Transform" ]
 
@@ -82,7 +81,7 @@ _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="." index="3"]
 
