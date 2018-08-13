@@ -29,6 +29,7 @@ func story(dialog_name):
 			"who": "dream",
 			"what": """
 				Your next task is to kill bots that try to sell bad games.
+				Jump on their heads, but don't touch them or their bad games!
 				"""
 			})
 		"1":

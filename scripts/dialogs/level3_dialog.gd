@@ -28,7 +28,8 @@ func story(dialog_name):
 			Ren.say({
 			"who":"dream",
 			"what": """
-				This is Gabe Renewal. He is your God!
+				This is Gabe Renewal. He is your God! You will
+				reccomend good games for him and his players!
 				"""
 			})
 		"1":
