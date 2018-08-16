@@ -7,10 +7,7 @@ path="res://.import/ren_character2d.svg-2756e4d1ca29eca471ac8d906a6cfec1.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_character2d.svg"
-source_md5="577df2902ba63466991de05aad51b66e"
-
 dest_files=[ "res://.import/ren_character2d.svg-2756e4d1ca29eca471ac8d906a6cfec1.stex" ]
-dest_md5="a728e6e3fd3f9c7003d26cb7070462d5"
 
 [params]
 

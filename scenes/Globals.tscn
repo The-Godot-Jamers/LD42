@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sfx/this_is_the_funny_song.ogg" type="AudioStream" id=3]
 
-[node name="Globals" type="Node"]
+[node name="Globals" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

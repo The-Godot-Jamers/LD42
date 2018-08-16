@@ -7,10 +7,7 @@ path="res://.import/0013.png-0a340a4215e3d9049a557dfd57312af4.stex"
 [deps]
 
 source_file="res://Character and Animations/PlayerCharacter/Run/0013.png"
-source_md5="443bfa7288f6ac10cf664f2083c820ae"
-
 dest_files=[ "res://.import/0013.png-0a340a4215e3d9049a557dfd57312af4.stex" ]
-dest_md5="47ef0d25a8d28a4ba1a3e53986fa61f3"
 
 [params]
 

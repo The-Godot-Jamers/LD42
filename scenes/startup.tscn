@@ -6,7 +6,7 @@
 [ext_resource path="res://gfx/blue_button02.png" type="Texture" id=4]
 [ext_resource path="res://gfx/grey_boxCheckmark.png" type="Texture" id=5]
 
-[node name="startup" type="Node" index="0"]
+[node name="startup" type="Node"]
 
 script = ExtResource( 1 )
 

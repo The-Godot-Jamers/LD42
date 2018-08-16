@@ -7,10 +7,7 @@ path="res://.import/gamepad.png-4dfbcb41faa5f0d8d31c1e452a09c972.stex"
 [deps]
 
 source_file="res://gfx/gamepad.png"
-source_md5="f0df761c4f4592348e66ee5e70a65ad2"
-
 dest_files=[ "res://.import/gamepad.png-4dfbcb41faa5f0d8d31c1e452a09c972.stex" ]
-dest_md5="c0eb95d6f7db72abfa93c39becee8483"
 
 [params]
 

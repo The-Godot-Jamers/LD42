@@ -11,7 +11,7 @@ func _ready():
 	Ren.define("score", score)
 	Ren.define("killed", killed)
 	Ren.define("lvl3_score", lvl3_score)
-	GUI.update_gui(score)
+	GUI.update_gui(score + killed + lvl3_score)
 	randomize()
 	if OS.get_name() == "Android":
 		GUI.set_mobile()
@@ -42,12 +42,17 @@ func gameover():
 func start():
 	score = 0
 	killed = 0
-	GUI.update_gui(score)
+	lvl3_score = 0
+	lvl = 1
+	GUI.update_gui(score + killed + lvl3_score)
 	get_tree().change_scene_to(load("res://scenes/level1.tscn"))
 
 func _set_score(value):
 	Ren.define("score", value)
 	$GUI.update_gui(value)
+
+func _get_score():
+	return Ren.get_value("score")
 
 func _get_killed():
 	return Ren.get_value("killed")
@@ -55,8 +60,6 @@ func _get_killed():
 func _set_killed(value):
 	Ren.define("killed", value)
 
-func _get_score():
-	return Ren.get_value("score")
 
 func _get_lvl3_score():
 	return Ren.get_value("lvl3_score")

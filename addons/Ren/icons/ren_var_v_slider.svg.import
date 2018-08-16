@@ -7,10 +7,7 @@ path="res://.import/ren_var_v_slider.svg-0959533271a35353f8c4dfe9f3050753.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_var_v_slider.svg"
-source_md5="e746f9a2fb7781a9c8927969b52da667"
-
 dest_files=[ "res://.import/ren_var_v_slider.svg-0959533271a35353f8c4dfe9f3050753.stex" ]
-dest_md5="b631f29a82b26b0a1d19e76830e029a4"
 
 [params]
 

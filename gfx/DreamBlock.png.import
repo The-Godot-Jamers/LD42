@@ -7,10 +7,7 @@ path="res://.import/DreamBlock.png-a598fabe10256271e5aad2f6184dacba.stex"
 [deps]
 
 source_file="res://gfx/DreamBlock.png"
-source_md5="b27b120821738d494277b4f1877038bc"
-
 dest_files=[ "res://.import/DreamBlock.png-a598fabe10256271e5aad2f6184dacba.stex" ]
-dest_md5="4eea5e90132d5a9ab04803a1fc934a5a"
 
 [params]
 

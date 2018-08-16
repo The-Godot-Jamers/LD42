@@ -7,10 +7,7 @@ path="res://.import/ren_choice_button.svg-74f9c37ceb94f89f746e853824d05224.stex"
 [deps]
 
 source_file="res://addons/Ren/icons/ren_choice_button.svg"
-source_md5="38260166c14de67c44c80539476585a9"
-
 dest_files=[ "res://.import/ren_choice_button.svg-74f9c37ceb94f89f746e853824d05224.stex" ]
-dest_md5="ba493e490c0f9702f6eef419993f9f36"
 
 [params]
 
